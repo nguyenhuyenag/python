@@ -1,0 +1,3 @@
+http://dnhoang.laptrinhphp.net/public/api/san-pham
+http://dnhoang.laptrinhphp.net/public/api/login
+http://dnhoang.laptrinhphp.net/public/api/user

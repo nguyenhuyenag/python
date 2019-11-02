@@ -1,0 +1,30 @@
+from xml.dom.minidom import Document
+import xml.dom.minidom
+import os.path
+
+
+def makeXml(ten_file):
+    if (os.path.isfile(ten_file)):
+        doc = xml.dom.minidom.parse(ten_file)
+        root_xml = doc.documentElement
+    else:
+        doc = Document()
+        root_xml = doc.createElement("books")
+        doc.appendChild(root_xml)
+
+    child_node = doc.createElement("book")
+    noi_dung = "Khong co noi dung"
+    child_node.setAttribute("title", noi_dung)
+    root_xml.appendChild(child_node)
+
+    author = doc.createElement("author")
+    tac_gia = "Nguyen Van B"
+    author.appendChild(doc.createTextNode(tac_gia))
+    child_node.appendChild(author)
+    
+    return doc
+
+
+if __name__ == "__main__":
+    makeXml("books.xml").writexml(open(file="books.xml", mode="w",
+                                       encoding="utf-8"), indent="", addindent="", newl="")
