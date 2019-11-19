@@ -5,6 +5,10 @@ print(len(a))
 # Chỉ mục danh sách bắt đầu từ 0, có thể được cắt lát, gộm, ... giống như chuỗi
 print(2 * a)
 
+print(*a)
+
+print(a[:])  # In ra chính nó
+
 # Tuy nhiên danh sách là mutable 
 a[0] = 0
 print(a)
@@ -32,3 +36,6 @@ print(q)
 p.append(6)
 
 print(q)
+
+x = [1]
+print(x + [2])
