@@ -4,6 +4,6 @@ from functools  import reduce
 def add(x, y):
     return x + y
 
-s = reduce(add, range(1, 11))
+fruit = reduce(add, range(1, 11))
 
-print(s)
+print(fruit)

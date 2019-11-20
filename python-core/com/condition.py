@@ -23,3 +23,10 @@ for n in range(2, 10):
             break
     else:
         print(n, 'is a prime number')
+
+"""
+Các toán tử and, or, not có độ ưu tiên thấp hơn các toán tử so sánh, not có độ ưu tiên cao nhất và or thấp nhất, ví dụ
+
+Ví dụ:    (A and not B or C)  <=>  (A and (not B)) or C
+
+"""
