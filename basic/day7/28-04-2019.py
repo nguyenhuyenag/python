@@ -57,24 +57,20 @@ else:
      elif (hum==0 and com=2)
 '''
 import random
-a=["Bao", "Bua","Keo"]
-kq=[[0,1,-1],[-1,0,1],[1,-1,0]]
-c= ["Hoa","Ban Thang","Ban Thua"]
+a = ["Bao", "Bua", "Keo"]
+kq = [[0, 1, -1], [-1, 0, 1], [1, -1, 0]]
+c = ["Hoa", "Ban Thang", "Ban Thua"]
 
 
-    
-com =random.randint(0,2)
-n=len(a)
+com = random.randint(0, 2)
+n = len(a)
 for i in range(n):
-    print("%d: %s"%(i,a[i]))
-    
-hum=int(input("Moi Ban Nhap"))
-print("May chon",a[com])
-print ("Nguoi chon",a[hum])
+    print("%d: %s" % (i, a[i]))
 
-tk= kq[int(hum)][int(com)]
+hum = int(input("Moi Ban Nhap"))
+print("May chon", a[com])
+print("Nguoi chon", a[hum])
+
+tk = kq[int(hum)][int(com)]
 
 print(c[kq[int(hum)][com]])
-
-
-
