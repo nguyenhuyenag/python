@@ -5,7 +5,7 @@ t = (12345, 54321, 'hello!')
 # Tháo dãy, lưu ý số biến bên trái phải = số lượng phần tử trong tupple
 x, y, z = t
 # x = 12345
-v y = 54321
+# y = 54321
 # v = 'hello!'
 
 # Tuple rỗng được tạo nên bởi một cặp ngoặc rỗng, tuple một phần tử được tạo bởi một giá trị theo sau bởi một dấu phẩy (việc cho giá trị đơn lẻ vào trong ngoặc không đủ để tạo tuple)

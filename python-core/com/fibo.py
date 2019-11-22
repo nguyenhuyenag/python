@@ -10,8 +10,8 @@ def fib(n):
 print(fib)
 
 # Gán 1 hàm
-f func fib
-f(func00)
+f = fib
+f(100)
 
 
 def fiboDynamic(n):
@@ -41,11 +41,11 @@ def ask_ok():
 # ask_ok()
 
 
-def f(func, L=[]):
-    if L is None:
-        L = []
-    L.append(a)
-    return L
+# def f(func, L=[]):
+#     if L is None:
+#         L = []
+#     L.append(a)
+#     return L
 
 
 def fNone(a, L=None):
@@ -54,10 +54,10 @@ def fNone(a, L=None):
     L.append(a)
     return L
 
+# print(f(func))
+# print(f(func))
+# print(f(func))
 
-print(f(func))
-print(f(func))
-print(f(func))
 
 print(fNone(1))
 print(fNone(2))
