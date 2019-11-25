@@ -9,4 +9,4 @@ open(filename, mode)
 f = open("data.txt", "r")
 print(f)
 for x in f:
-    print(x.rst)
+    print(x.rstrip())
