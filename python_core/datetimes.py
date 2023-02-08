@@ -1,7 +1,7 @@
 import datetime
 
-x = datetime.datetime.now()
+d = datetime.datetime.now()
 
-print(x)
-print(x.year)
-print(x.strftime("%Y"))
+print(d)
+print(d.year)
+print(d.strftime("%Y-%m-%d %H:%M:%S"))
