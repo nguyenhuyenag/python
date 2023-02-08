@@ -1,7 +1,9 @@
 import platform
 
-x = platform.system()
-print(x)
+# x = platform.system()
+# print(x)
 
-x = dir(platform)
-print(x)
+for x in dir(platform):
+    print(x)
+
+

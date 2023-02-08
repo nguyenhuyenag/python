@@ -1,34 +1,33 @@
-import this
+# import this
 
+thelist = ["a", "b", "c"]
 
-thislist = ["a", "b", "c"]
+thelist.insert(1, "1")
 
-thislist.insert(1, "1")
+thelist.append("a")
 
-thislist.append("a")
-
-print(thislist)
+print(thelist)
 
 # Extend list
 tropical = ["mango", "pineapple", "papaya"]
 
-print(thislist + tropical)
-thislist.extend(tropical)
+print(thelist + tropical)
+thelist.extend(tropical)
 
-print(thislist)
+print(thelist)
 
 # Remove list item
-thislist.remove("mango")
-print(thislist)
+thelist.remove("mango")
+print(thelist)
 
 # Remove specified index: the pop() method removes the last item
-thislist.pop(2)
-print(thislist)
+thelist.pop(2)
+print(thelist)
 
-thislist.reverse()
+thelist.reverse()
 
-print("Count:", thislist.count("a"))
+print("Count:", thelist.count("a"))
 
 # Clear the list
-thislist.clear()
-print(thislist)
+thelist.clear()
+print("Clear list:", thelist)
