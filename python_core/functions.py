@@ -3,7 +3,7 @@ def func1(*args):  # -> tuple
 
 
 def func2(**kid):  # -> dict
-    print("His last name is " + kid["lname"])
+    print("His last name is " + kid["name"])
 
 
 def func3(country="Norway"):
@@ -11,5 +11,5 @@ def func3(country="Norway"):
 
 
 func1("a", "b", "c")
-func2(fname="Tobias", lname="Refsnes")
+func2(name="Tobias", age=25)
 func3()
