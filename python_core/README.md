@@ -1,6 +1,8 @@
 Pycharm shortcut
 
-- Ctrl + X  : Delete line
-- Ctrl + D  : Duplicate line
-- Ctrl + Shift + Up/Down: Move line up/down
-- Ctrl + Alt + Shift + L : Format code
+- Delete line               Ctrl + X 
+- Duplicate line            Ctrl + D 
+- Move line up/down         Ctrl + Shift + Up/Down 
+- Format code               Ctrl + Alt + Shift + L
+- Close current file        Ctrl + F4
+- Extract method            Ctrl + Alt + M
