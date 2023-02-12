@@ -13,3 +13,4 @@ def func3(country="Norway"):
 func1("a", "b", "c")
 func2(name="Tobias", age=25)
 func3()
+
