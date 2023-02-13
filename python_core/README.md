@@ -6,3 +6,6 @@ Pycharm shortcut
 - Format code               Ctrl + Alt + Shift + L
 - Close current file        Ctrl + F4
 - Extract method            Ctrl + Alt + M
+
+- Disable username anotation
+    File > Setting > Inlay Hints > Code Vision > Code author
