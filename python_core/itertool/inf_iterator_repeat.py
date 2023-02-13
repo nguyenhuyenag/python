@@ -7,6 +7,11 @@ def repeat_value():
         print(v, end=" ")
         sleep(1)
 
+def repeat_two():
+    for v1, v2 in repeat([1, 2]):
+        print("{}, {}".format(v1, v2))
+        sleep(1)
+
 
 def repeat_times():
     for v in repeat("Python", 7):  # repeat 7 lần
@@ -14,12 +19,6 @@ def repeat_times():
         sleep(1)
 
 
-def repeat_two():
-    for v1, v2 in repeat([1, 2]):
-        print("{}, {}".format(v1, v2))
-        sleep(1)
-
-
 # repeat_one()
-# repeat_two()
-repeat_times()
+repeat_two()
+# repeat_times()
