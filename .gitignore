@@ -108,5 +108,6 @@ venv.bak/
 **/.metadata
 *.project
 
-python_core/.idea/misc.xml
-python_core/.idea/python_core.iml
+# folder
+.idea
+.idea/
