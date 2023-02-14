@@ -1,9 +1,9 @@
-import platform
+list = []
 
-# x = platform.system()
-# print(x)
+if list:
+    print(True)
+else:
+    print(False)
 
-for x in dir(platform):
-    print(x)
 
 
