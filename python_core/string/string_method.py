@@ -31,7 +31,7 @@ print("IsSpace:", "   ".isspace())
 
 # Join all items in a 'iterable', using a hash character as separator
 dict = ["a", "b", "c"]
-print("Join", "______".join(dict))
+print("Join", "=====".join(dict))
 
 # Trim a string: strip, lstrip, rstrip
 txt = "     banana     "

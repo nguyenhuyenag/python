@@ -38,14 +38,6 @@
 # diff = list(set(list2) - set(list1))
 # print(diff)
 
-def toJson():
-    return {"name": 'Green'}
-
-
-data = {"age": 22}
-
-print(type(data))
-
-data.update(toJson())
-
-print(data)
+# print(6*['|'])
+x = " a b b    "
+print(x.strip())
