@@ -38,6 +38,7 @@
 # diff = list(set(list2) - set(list1))
 # print(diff)
 
-# print(6*['|'])
-x = " a b b    "
-print(x.strip())
+from itertools import compress
+
+x = compress("ABCD", [0,1,1,0])
+print(list(x))
