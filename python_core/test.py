@@ -38,7 +38,8 @@
 # diff = list(set(list2) - set(list1))
 # print(diff)
 
-from itertools import compress
+domain = ['|', ('team_id', 'in', "team_ids"), ('team_head', '=', "user_id")]
 
-x = compress("ABCD", [0,1,1,0])
-print(list(x))
+domain.append([['stage_id', '=', "stage_id"]])
+
+print(domain)
