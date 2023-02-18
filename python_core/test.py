@@ -38,8 +38,37 @@
 # diff = list(set(list2) - set(list1))
 # print(diff)
 
-domain = ['|', ('team_id', 'in', "team_ids"), ('team_head', '=', "user_id")]
+# from itertools import groupby
+#
+# some_list = [("Animal", "cat"),
+#              ("Animal", "dog"),
+#              ("Animal", "lion"),
+#              ("Plant", "dandellion"),
+#              ("Plant", "blumen")]
+#
+# for key, group in groupby(some_list, lambda x: x[0]):
+#     key_and_group = {key: list(group)}
+#     print(key_and_group)
 
-domain.append([['stage_id', '=', "stage_id"]])
+from itertools import pairwise
 
-print(domain)
+# def pairwise(iterable):
+#     "s -> (s0,s1), (s2,s3), (s4, s5), ..."
+#     a = iter(iterable)
+#     return zip(a, a)
+
+l = [1, 2, 3, 4, 5, 6, 7]
+print(())
+for x, y in pairwise(l):
+   print("{} + {} = {}".format(x, y, x + y))
+   # print(v)
+#
+# # 1 + 2 = 3
+# # 3 + 4 = 7
+# # 5 + 6 = 11
+# #izip() does almost same thing as zip() but it returns a iterlist.izip object which is iterable using next() or using loops
+# print x
+# #cant print contents of iterable object directly
+# print "\nUSING LOOP TO PRINT CONTENTS OF izip OBJECT"
+# for i in x:
+#     print i

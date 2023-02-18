@@ -4,7 +4,7 @@ Pycharm
   - Step by step                F8
   - End debug                   F9
 
-- Disable username anotation
+- Disable username annotation
     File > Setting > Inlay Hints > Code Vision > Code author
 
 - Delete line                   Ctrl + X 
@@ -16,3 +16,5 @@ Pycharm
 - Find & replace                Ctrl + R          
 - Find method (show outline)    Ctrl + F12
 - Go to line                    Ctrl + G
+
+pip install more-itertools

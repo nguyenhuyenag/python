@@ -1,11 +1,8 @@
 # import this
 
 thelist = ["a", "b", "c"]
-
 thelist.insert(1, "1")
-
 thelist.append("a")
-
 print(thelist)
 
 # Extend list

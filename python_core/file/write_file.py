@@ -3,6 +3,6 @@
 #   'a' - Append, will append to the end of the file
 #   'w' - Write, will overwrite any existing content
 
-f = open("file/demofile2.txt", "a")
+f = open("data-file.txt", "w")
 f.write("Now the file has more content!\n")
 f.close()
