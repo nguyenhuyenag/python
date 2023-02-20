@@ -1,6 +1,7 @@
 from itertools import permutations
 
 
+# p[collection, r]: r-length tuples, all possible orderings, no repeated elements
 def base():
     for v in permutations("ABC"):
         print(v, end=" ")
@@ -9,6 +10,6 @@ def base():
 # base()
 
 print("All the permutations of the given container is:")
-print(list(permutations([1, 2, 3], 1)))
-print(list(permutations([1, 2, 3], 2)))
-print(list(permutations([1, 2, 3], 3)))
+arr = [1,2,3]
+for i in range(1, len(arr) + 1):
+    print(list(permutations(arr, i)))
