@@ -14,8 +14,9 @@
 #       'company_id']
 #
 # print(set(l2) - set(l1))
+import json
 
-from itertools import combinations_with_replacement
+values = '{"company_id": 1, "stage_id": 4, "ticket_type": 1, "team_id": 2, "team_head": 2, "user_id": 2, "category_id": 3, "partner_id": 14}'
 
-print("All the combination of List in sorted order(with replacement) is:")
-print(list(combinations_with_replacement('ABC', 2)))
+values = json.loads([{}]) or {}
+print(values)
