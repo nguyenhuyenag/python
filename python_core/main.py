@@ -27,9 +27,12 @@ fields = ['id', 'name', 'company_id',
                       'company_name', 'write_uid', 'create_uid',
                       'calendar_last_notif_ack', 'create_date', 'write_date']
 
-# 'id': partner['id'],
-object_name = "partner"
-print("{")
-for v in fields:
-    print("'" + v + "': " + object_name + "[" + "'" + v + "'" + "],")
-print("}")
+# print(2 ^ 2 ^ 3)
+arr = [1, 1, 2 , 2, 3, 3, 4]
+
+x = 0
+
+for v in arr:
+    x = x ^ v
+
+print(x)
