@@ -1,22 +1,35 @@
-# l1 = ['id', 'included_segments', 'excluded_segments', 'filter', 'specific_devices', 'target_parameters', 'contents',
-#       'headings', 'data', 'app_id', 'company_id', 'status', 'reason', 'external_id', 'one_signal_notification_id',
-#       'recipients_count', 'cron_job', 'send_time', 'x_res_partner_check', 'email_char', 'email_text', 'x_all',
-#       'x_link_url', 'x_detail_content', 'create_uid', 'create_date', 'write_uid', 'write_date']
+# l1 = ['id', 'name', 'company_id', 'create_date', 'display_name', 'date', 'title', 'parent_id', 'ref', 'lang', 'tz', 'user_id', 'vat', 'website', 'comment', 'credit_limit', 'active', 'employee', 'function', 'type', 'street', 'street2', 'zip', 'city', 'state_id', 'country_id', 'partner_latitude', 'partner_longitude', 'email', 'phone', 'mobile', 'is_company', 'industry_id', 'color', 'partner_share', 'commercial_partner_id', 'commercial_company_name', 'company_name', 'create_uid', 'write_uid', 'write_date', 'message_main_attachment_id', 'email_normalized', 'message_bounce', 'signup_token', 'signup_type', 'signup_expiration', 'team_id', 'debit_limit', 'last_time_entries_checked', 'invoice_warn', 'invoice_warn_msg', 'supplier_rank', 'customer_rank', 'sale_warn', 'sale_warn_msg', 'user_is', 'calendar_last_notif_ack', 'website_id', 'is_published', 'purchase_warn', 'purchase_warn_msg', 'partner_ref_id', 'black_list', 'fax', 'picking_warn', 'picking_warn_msg', 'website_meta_title', 'website_meta_description', 'website_meta_keywords', 'website_meta_og_img', 'seo_name', 'website_description', 'website_short_description', 'x_select_property', 'x_is_tenants', 'x_pro4u_dob', 'x_pro4u_cmnd', 'is_property', 'x_qr_code']
 #
-# l2 = ['app_id', 'id', 'company_id',
-#       'email_text', 'x_all',
-#       'email',
-#       'contents', 'headings', 'send_time',
-#       'x_link_url',
-#       'write_date', 'write_uid', 'create_date',
-#       'create_uid',
-#       'display_name', 'x_detail_content', 'data',
-#       'company_id']
+# l2 = ['id', 'name', 'company_id', 'create_date',
+#                       'display_name', 'date', 'title', 'parent_id',
+#                       'lang', 'tz', 'user_id', 'vat', 'website', 'comment',
+#                       'credit_limit', 'active', 'customer_rank',
+#                       'employee', 'supplier_rank', 'function', 'type',
+#                       'street', 'street2', 'zip', 'city', 'state_id',
+#                       'country_id', 'email', 'phone',
+#                       'mobile', 'is_company', 'color',
+#                       'commercial_partner_id', 'commercial_company_name',
+#                       'company_name', 'write_uid', 'create_uid',
+#                       'write_date', 'calendar_last_notif_ack'
+#                       ]
 #
 # print(set(l2) - set(l1))
-import json
 
-values = '{"company_id": 1, "stage_id": 4, "ticket_type": 1, "team_id": 2, "team_head": 2, "user_id": 2, "category_id": 3, "partner_id": 14}'
+fields = ['id', 'name', 'company_id',
+                      'display_name', 'date', 'title', 'parent_id',
+                      'lang', 'tz', 'user_id', 'vat', 'website', 'comment',
+                      'credit_limit', 'active', 'customer_rank',
+                      'employee', 'supplier_rank', 'function', 'type',
+                      'street', 'street2', 'zip', 'city', 'state_id',
+                      'country_id', 'email', 'phone',
+                      'mobile', 'is_company', 'color',
+                      'commercial_partner_id', 'commercial_company_name',
+                      'company_name', 'write_uid', 'create_uid',
+                      'calendar_last_notif_ack', 'create_date', 'write_date']
 
-values = json.loads([{}]) or {}
-print(values)
+# 'id': partner['id'],
+object_name = "partner"
+print("{")
+for v in fields:
+    print("'" + v + "': " + object_name + "[" + "'" + v + "'" + "],")
+print("}")

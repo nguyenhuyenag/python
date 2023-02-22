@@ -7,7 +7,8 @@ Pycharm
 - Disable username annotation
     File > Setting > Inlay Hints > Code Vision > Code author
 
-- Delete line                    Ctrl + X 
+- Cut line                       Ctrl + X
+- Delete line                    Ctrl + X
 - Duplicate line                 Ctrl + D 
 - Move line up/down              Ctrl + Shift + Up/Down 
 - Format code                    Ctrl + Alt + Shift + L
