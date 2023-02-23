@@ -1,8 +1,5 @@
 from collections.abc import Iterable
 
-a = None
-b = []
-c = {}
-print("a: ", isinstance(a, Iterable))
-print("b: ", isinstance(b, Iterable))
-print("c: ", isinstance(c, Iterable))
+print("[] -> ", isinstance([], Iterable))
+print("{} -> ", isinstance({}, Iterable))
+print("None -> ", isinstance(None, Iterable))

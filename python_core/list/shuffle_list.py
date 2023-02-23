@@ -2,7 +2,7 @@ from random import shuffle
 
 
 def shuffle_list():
-    arr = [i for i in range(10)]
+    arr = [i for i in range(5)]
     print(arr)
     shuffle(arr)
     print(arr)
@@ -10,12 +10,11 @@ def shuffle_list():
 
 def shuffle_string():
     s = "abcdefgh"
-    print(s)
-    l = list("abcdefgh")
-    shuffle(l)
-    result = ''.join(l)
-    print(result)
+    li = list("abcdefgh")
+    shuffle(li)
+    result = ''.join(li)
+    print("Shuffle string: {} -> {}".format(s, result))
 
 
-# shuffle_list()
+shuffle_list()
 shuffle_string()

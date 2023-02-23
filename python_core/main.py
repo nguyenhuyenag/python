@@ -14,8 +14,12 @@
 #                       ]
 #
 # print(set(l2) - set(l1))
+# list of vowels
 
-from collections.abc import Iterable
+# all values true
+l = [1, 3, 4, 5]
+print(all(l))
 
-e = None
-print(isinstance(e, Iterable))
+# one false value
+l = [1, 3, 4, 0]
+print(all(l))
