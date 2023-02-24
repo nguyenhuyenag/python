@@ -14,12 +14,10 @@
 #                       ]
 #
 # print(set(l2) - set(l1))
-# list of vowels
 
-# all values true
-l = [1, 3, 4, 5]
-print(all(l))
+message = 'Python is fun'
 
-# one false value
-l = [1, 3, 4, 0]
-print(all(l))
+# convert string to bytes
+byte_message = bytes(message, 'utf-8')
+for v in byte_message:
+    print(v)

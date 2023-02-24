@@ -32,29 +32,6 @@ thelist.reverse()
 print("Reverse: ", thelist)
 # print("Reverse: ", sorted(thelist, reverse=True))
 
-# Filter
-scores = [200, 105, 18, 80, 150, 140]
-filtered_scores = [s for s in scores if s >= 150]
-print(filtered_scores)
-
-
-# Filter
-def filter_height(height):
-    if height < 150:
-        return True
-    else:
-        return False
-
-
-heights = [140, 180, 165, 162, 145]
-filtered_heights = filter(filter_height, heights)
-print(list(filtered_heights))
-
-# Filter by lambda
-ages = [20, 33, 44, 66, 78, 92]
-filtered_ages = filter(lambda a: a > 50, ages)
-print(list(filtered_ages))
-
 # Clear the list
 thelist.clear()
 print("Clear list:", thelist)
