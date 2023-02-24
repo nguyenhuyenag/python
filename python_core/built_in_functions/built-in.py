@@ -1,5 +1,8 @@
 # Binary
 n = 15
 bi = bin(n)
-print("{} -> {}".format(n, bi))
+print("{} -> {}".format(n, bin(n)))
 print("{} -> {}".format(bi, int(bi, 2)))
+
+# Eval
+print(eval("3 * 3"))

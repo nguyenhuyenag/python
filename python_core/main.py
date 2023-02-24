@@ -14,10 +14,6 @@
 #                       ]
 #
 # print(set(l2) - set(l1))
-
-message = 'Python is fun'
-
-# convert string to bytes
-byte_message = bytes(message, 'utf-8')
-for v in byte_message:
-    print(v)
+# vowel dictionary
+vowel_dictionary = {'a': 1, 'e': 2, 'i': 3, 'o':4, 'u':5}
+print(list(vowel_dictionary))
