@@ -1,8 +1,3 @@
-def char_and_byte():
-    print("Char to int: {} -> {}".format('a', ord('a')))
-    print("Int to char: {} -> {}".format(97, chr(97)))
-
-
 def sting_bytes():
     message = 'Python is fun'
     byte_message = bytes(message, 'utf-8')  # an immutable bytes

@@ -14,6 +14,7 @@
 #                       ]
 #
 # print(set(l2) - set(l1))
-# vowel dictionary
-vowel_dictionary = {'a': 1, 'e': 2, 'i': 3, 'o':4, 'u':5}
-print(list(vowel_dictionary))
+
+arr = [1,2,3,4,5,6]
+
+ite = iter(arr)
