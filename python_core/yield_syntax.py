@@ -7,12 +7,12 @@ cùng một lúc ra nhiều outputs rồi đưa tất cả chúng vào trong m�
 """
 
 
-def simpleGeneratorFun():
+def simple_generator():
     yield 1
     yield 2
     yield 3
 
 
 # Driver code to check above generator function
-for value in simpleGeneratorFun():
+for value in simple_generator():
     print(value)
