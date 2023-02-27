@@ -25,6 +25,8 @@ def filter_by_lambda():
     When None is used as the first argument to the filter() function, all elements that are truthy
     values (gives True if converted to boolean) are extracted
 """
+
+
 def filter_by_none():
     random_list = [1, 'a', 0, False, True, '0']
     filtered_iterator = filter(None, random_list)
