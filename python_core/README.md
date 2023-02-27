@@ -7,6 +7,10 @@ Pycharm
 - Disable username annotation
     File > Setting > Inlay Hints > Code Vision > Code author
 
+- Shortcut setting
+    
+    File > Setting > Search 'Keymap'
+
 - Cut line                       Ctrl + X
 - Delete line                    Ctrl + X
 - Duplicate line                 Ctrl + D 

@@ -15,6 +15,9 @@
 #
 # print(set(l2) - set(l1))
 
-arr = [1,2,3,4,5,6]
+seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')
 
-ite = iter(arr)
+# reverse of a tuple object
+print(list(reversed(seq_tuple)))
+
+print(seq_tuple)

@@ -36,14 +36,14 @@ def string_to_integer():
     print(arr)
 
 
-def read_file_into_list():
-    file_content = [line.strip() for line in open("file/data-file.txt", "r")]
-    print(file_content)
+# def read_file_into_list():
+#     file_content = [line.strip() for line in open("file/data-file.txt", "r")]
+#     print(file_content)
 
 
 # swap_value()
 # list_comprehension()
 # print_without_newline()
-# reverse_string_or_list()
+reverse_string_or_list()
 # string_to_integer()
-read_file_into_list()
+# read_file_into_list()
