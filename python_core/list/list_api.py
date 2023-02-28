@@ -17,4 +17,14 @@ def append_first():
     print("Append first: ", arr)
 
 
-append_first()
+def list_api():
+    arr = [1, 2, 3, 4, 5]
+
+    arr.pop()           # = arr.pop(-1) Get and remove the last item
+    arr.pop(2)          # Get and remove the iteam at the give index, de
+
+    print(arr)
+
+
+# append_first()
+list_api()
