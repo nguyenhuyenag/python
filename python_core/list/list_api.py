@@ -21,7 +21,7 @@ def list_api():
     arr = [1, 2, 3, 4, 5]
 
     arr.pop()           # = arr.pop(-1) Get and remove the last item
-    arr.pop(2)          # Get and remove the iteam at the give index, de
+    arr.pop(2)          # Get and remove the item at the give index
 
     print(arr)
 
