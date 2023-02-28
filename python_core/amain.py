@@ -15,9 +15,9 @@
 #
 # print(set(l2) - set(l1))
 
-seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')
+# random sales dictionary
+sales = { 'apple': 2, 'orange': 3, 'grapes': 4 }
 
-# reverse of a tuple object
-print(list(reversed(seq_tuple)))
+sales.pop()
 
-print(seq_tuple)
+print(sales)

@@ -14,6 +14,7 @@ Pycharm
 - Cut line                       Ctrl + X
 - Delete line                    Ctrl + X
 - Duplicate line                 Ctrl + D 
+- Undo / Redo                    Ctrl + Z / Ctrl + Shift + Z
 - Move line up/down              Ctrl + Shift + Up/Down 
 - Format code                    Ctrl + Alt + Shift + L
 - Close current file             Ctrl + F4
