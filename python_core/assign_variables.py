@@ -6,7 +6,7 @@ print(x, y, z)
 x = y = z = "orange"
 print(x, y, z)
 
-# Unpack an collection
+# Unpack a collection
 fruits = ["banana", "strawberry", "cherry"]
 x, y, z = fruits
 print(x, y, z)
