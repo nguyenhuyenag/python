@@ -15,9 +15,5 @@
 #
 # print(set(l2) - set(l1))
 
-# random sales dictionary
-sales = { 'apple': 2, 'orange': 3, 'grapes': 4 }
-
-sales.pop()
-
-print(sales)
+arr = [1,2,3,4,5]
+print(arr[::-1])

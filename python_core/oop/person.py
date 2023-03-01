@@ -1,22 +1,47 @@
+from datetime import datetime
+
+"""
+Class method và Static method
+
+    – Class method nhận vào cls làm tham số đầu tiên, trong khi static method không cần tới tham số đặc biệt nào.
+
+    – Class method có thể truy cập hoặc sửa đổi trạng thái của class, trong khi static method không thể truy cập tới
+    hay sửa đổi nó.
+
+    – Nói chung, static method không biết gì về trạng thái của class. Chúng là những method – phương thức thuộc kiểu
+    tiện ích, nhận vào một số tham số và làm việc trên các tham số đó. Mặt khác, class method phải có được một class
+    làm tham số truyền vào cho nó.
+
+    – Chúng ta sử dụng cái decorator @classmethod trong Python để tạo ra một class method (phương thức/hàm thuộc về lớp)
+    và sử dụng decorator @staticmethod để tạo ra một static method (phương thức/hàm tĩnh) trong Python.
+"""
+
+
 class Person:
     # The __init__() function is called automatically every time the class is being used to create a new object
-    def __init__(self, name, age):
+    # Có thể đổi tên `self` thành tên bất kỳ nhưng phải là tham số đầu tiên của hàm
+    def __init__(self, name, year):
         self.name = name
-        self.age = age
-    
+        self.year = year
+
     # ~ toString() method
     def __str__(self):
-        return f"{self.name}({self.age})"
+        return f"[name={self.name}, year={self.year}]"
 
-    # Có thể thay đổi tên của `self` thành tên bất kỳ nhưng phải là tham số đầu tiên của hàm
-    def sayHello(this):
-        return f"Hello {this.name}"
+    # A class method to create a Person object by birth year
+    @classmethod
+    def fromYear(cls, name, year):
+        return cls(name, datetime.today().year - year)
 
-p1 = Person("Python", 1995)
+    # A static method to check if a Person is adult or not
+    @staticmethod
+    def isAdult(age):
+        return age > 18
 
-print(p1)
 
-# Modify object properties
-p1.name = "Java"
-
-print(p1.sayHello())
+if __name__ == '__main__':
+    p1 = Person("Python", 1995)
+    print(p1)
+    # Modify object properties
+    p1.name = "Java"
+    print(p1)

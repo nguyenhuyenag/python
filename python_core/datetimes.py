@@ -1,6 +1,6 @@
-import datetime
+from datetime import datetime
 
-d = datetime.datetime.now()
+d = datetime.now()
 
 print(d)
 print(d.year)

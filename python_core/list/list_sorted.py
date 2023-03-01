@@ -1,3 +1,8 @@
+"""
+    Sort by length: list.sort(key=len) = sorted(list, key=len)
+"""""
+
+
 def sort_in_place():
     thelist = [1, 2, 0, -1, -3, 4]
     thelist.sort(reverse=True)
