@@ -1,4 +1,0 @@
-
-- Hoc phong 408, lau 4 
-
-- python -m pip install wxpython
