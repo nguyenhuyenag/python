@@ -8,14 +8,14 @@ mysql_connect = connector.connect(
     database="w3schools"
 )
 
-cursor = mysql_connect.cursor()
-cursor.execute("SELECT * FROM categories")
-# [('categories',), ('customers',), ('employees',), ('order_details',), ('orders',), ('products',), ('shippers',), ('suppliers',)]
+with mysql_connect.cursor() as cursor:
+    cursor.execute("SELECT * FROM categories")
 
-fetchall = cursor.fetchall()
+    fetchall = cursor.fetchall()
 
-columns = [col[0] for col in cursor.description]
+    columns = [col[0] for col in cursor.description]
 
-for row in fetchall:
-    print(dict(zip(columns, row)))
+    for row in fetchall:
+        print(dict(zip(columns, row)))
 
+print(mysql_connect.is_connected())
