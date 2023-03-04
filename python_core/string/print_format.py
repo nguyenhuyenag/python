@@ -1,3 +1,6 @@
+str = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(str.format(3, 576, 10.5))
+
 kill_count = 9
 agent_name = 'James Bond'
 

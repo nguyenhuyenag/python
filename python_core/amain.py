@@ -1,5 +1,10 @@
-from mysql.dbsettings import connection_properties
+# from mysql.dbsettings import connection_properties
+#
+# x  = connection_properties
+#
+# print(*x)
 
-x  = connection_properties
+s1  = "abc"
+s2 = "ABc"
 
-print(*x)
+print(s1.casefold() == s2.casefold())

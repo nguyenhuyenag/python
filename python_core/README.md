@@ -23,6 +23,7 @@ Pycharm
 - Find method (show outline)     Ctrl + F12
 - File class name                Ctrl + N
 - Go to line                     Ctrl + G
+- Run current                    Shift + F10
 
 See more
 

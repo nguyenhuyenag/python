@@ -1,14 +1,13 @@
 from random import shuffle
-# import string_utils
-# print string_utils.shuffle("random_string")
+
 
 def shuffle_string():
-    s = "shuffle_this_string"
-    print(s)
+    s = "string"
     l = list(s)
     shuffle(l)
     result = ''.join(l)
-    print(result)
+    print("Before:", s)
+    print("After: ", result)
 
 
 shuffle_string()
