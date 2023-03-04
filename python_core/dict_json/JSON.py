@@ -2,8 +2,8 @@ import json
 
 
 def string_to_json():
-    jstring = '{ "name":"John", "age":30, "city":"New York"}'
-    y = json.loads(jstring)
+    jstr = '{ "name":"John", "age":30, "city":"New York"}'
+    y = json.loads(jstr)
     print(y["age"])
 
 
@@ -27,7 +27,7 @@ def format_json():
 
 # is merged dictionary
 def merge_json():
-    x = {"age": 22}
+    x = {"age": 22, "gender": "Male"}
     y = {"name": 'Green'}
     x.update(y)
     print(x)
