@@ -37,9 +37,10 @@ def delete_any_folder():
 
 
 def join_path():
-    rel_path = "2091/data.txt"
+    rel_path = r"2091\data.txt"
     script_dir = os.path.dirname(__file__)
     abs_file_path = os.path.join(script_dir, rel_path)
+
     print("Unix -> ", abs_file_path.replace(os.sep, posixpath.sep))
     print("Windows -> ", abs_file_path.replace(os.sep, ntpath.sep))
 
@@ -61,5 +62,5 @@ def fixpath():
 # rename_folder()
 # delete_empty_folder()
 # delete_any_folder()
-# join_path()
-fixpath()
+join_path()
+# fixpath()
