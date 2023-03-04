@@ -12,6 +12,5 @@ def string_bytearray():
     print(list(arr))
 
 
-char_and_byte()
-# sting_bytes()
+sting_bytes()
 # string_bytearray()
