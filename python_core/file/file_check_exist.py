@@ -4,10 +4,10 @@ import pathlib
 # from pathlib import Path
 # from os.path import exists
 
-path = "D:\Dev\Projects\Github\python\python_core\mysql\connectors.cnf"
+pathfile = "D:/Dev/Projects/Github/python/python_core/mysql/connectors.cnf"
 
 # Using exists()
-print(os.path.exists(path))
+print(os.path.exists(pathfile))
 # print(os.path.exists("file/data.txt"))
 
 # Using isFile()

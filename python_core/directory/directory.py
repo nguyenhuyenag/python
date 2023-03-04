@@ -1,8 +1,6 @@
-import shutil
-import os
 from os import path
-from os.path import dirname, abspath
-import os
+import shutil, os, ntpath, posixpath
+from pathlib import PureWindowsPath, PurePosixPath
 
 
 # Get Current Directory in Python
@@ -38,8 +36,30 @@ def delete_any_folder():
         shutil.rmtree("new_one")
 
 
+def join_path():
+    rel_path = "2091/data.txt"
+    script_dir = os.path.dirname(__file__)
+    abs_file_path = os.path.join(script_dir, rel_path)
+    print("Unix -> ", abs_file_path.replace(os.sep, posixpath.sep))
+    print("Windows -> ", abs_file_path.replace(os.sep, ntpath.sep))
+
+
+def fixpath():
+    # Windows -> Posix
+    win = r'foo\bar\file.txt'
+    posix = str(PurePosixPath(PureWindowsPath(win)))
+    print(posix)  # foo/bar/file.txt
+
+    # Posix -> Windows
+    posix = 'foo/bar/file.txt'
+    win = str(PureWindowsPath(PurePosixPath(posix)))
+    print(win)  # foo\bar\file.txt
+
+
 # get_current_dir()
 # create_folder()
 # rename_folder()
 # delete_empty_folder()
-delete_any_folder()
+# delete_any_folder()
+# join_path()
+fixpath()

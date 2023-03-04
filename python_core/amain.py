@@ -1,10 +1,11 @@
-# from mysql.dbsettings import connection_properties
-#
-# x  = connection_properties
-#
-# print(*x)
+from pathlib import PureWindowsPath, PurePosixPath
 
-s1  = "new_one"
-s2 = "ABc"
+# Windows -> Posix
+win = r'foo\bar\file.txt'
+posix = str(PurePosixPath(PureWindowsPath(win)))
+print(posix)  # foo/bar/file.txt
 
-print(s1.casefold() == s2.casefold())
+# Posix -> Windows
+posix = 'foo/bar/file.txt'
+win = str(PureWindowsPath(PurePosixPath(posix)))
+print(win)  # foo\bar\file.txt
