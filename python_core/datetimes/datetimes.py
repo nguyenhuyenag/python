@@ -15,11 +15,3 @@ def to_millisecond():
 
 datetime_api()
 to_millisecond()
-# method_name()
-
-
-# ms = time.time_ns()
-# print(ms)
-
-
-
