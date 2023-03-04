@@ -19,12 +19,12 @@ def find_and_index():
 
 def check_number_alpha():
     # Check digits & numeric
-    print("IsDigit: 'abc' ->", "abc".isdigit())
+    print("IsDigit: 'new_one' ->", "new_one".isdigit())
     print("IsDigit: '123456' ->", "123456".isdigit())
     print("IsNumeric: '123456' ->", "123456".isnumeric())
 
     # Check alpha
-    print("IsAlpha: 'abc' ->", "abc".isalpha())
+    print("IsAlpha: 'new_one' ->", "new_one".isalpha())
     print("IsAlpha: 'abc1234' ->", "abc123".isalpha())
 
     # Alpha OR numerical
@@ -50,7 +50,7 @@ def partition():
 
 
 def zerofill():
-    print("Zfill:", "abc".zfill(10))
+    print("Zfill:", "new_one".zfill(10))
 
 
 # count()

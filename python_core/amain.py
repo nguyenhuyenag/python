@@ -4,7 +4,7 @@
 #
 # print(*x)
 
-s1  = "abc"
+s1  = "new_one"
 s2 = "ABc"
 
 print(s1.casefold() == s2.casefold())

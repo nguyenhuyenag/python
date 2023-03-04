@@ -2,23 +2,44 @@ import shutil
 import os
 from os import path
 from os.path import dirname, abspath
+import os
+
 
 # Get Current Directory in Python
-print(os.getcwd())
+def get_current_dir():
+    d = path.dirname(path.dirname(__file__))
+    print("Dirname: ", d)
+    print("CWD: ", os.getcwd())
+    # d = dirname(dirname(abspath(__file__)))
+    # print("Abspath: ", d)
+    # ROOT_DIR = os.path.abspath(os.curdir)
+    # print("ROOT_DIR: ", ROOT_DIR)
 
-d = dirname(dirname(abspath(__file__)))
-print(d)
 
-d = path.dirname(path.dirname(__file__))
-print(d)
+def create_folder():
+    os.mkdir('test')
 
-os.mkdir('test')
 
-# rename a directory
-os.rename('test','new_one')
+def rename_folder():
+    if os.path.isdir('test') and not os.path.isdir('new_one'):
+        os.rename('test', 'new_one')
+        print("Done")
+    else:
+        print("Fail")
 
-# delete the empty directory "mydir"
-os.rmdir("mydir")
 
-# delete "mydir" directory and all of its contents
-shutil.rmtree("mydir")
+def delete_empty_folder():
+    if os.path.isdir('new_one'):
+        os.rmdir("new_one")
+
+
+def delete_any_folder():
+    if os.path.isdir('new_one'):
+        shutil.rmtree("new_one")
+
+
+# get_current_dir()
+# create_folder()
+# rename_folder()
+# delete_empty_folder()
+delete_any_folder()
