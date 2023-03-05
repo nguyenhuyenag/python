@@ -27,5 +27,5 @@ def perm(a, k=0):
             a[k], a[i] = a[i], a[k]
 
 
-print("Find all permution")
+print("Find all permutation")
 perm([1, 2, 3])
