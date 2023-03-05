@@ -7,8 +7,7 @@ def immutable_set():
 def set_api():
     A = {1, 3, 5, 7, 9, 8}
     B = {2, 3, 5, 7, 11}
-    M = {8, 2, 0, 7, 11}
-
+#
     A.discard(8)                    # Remove item
 
     A.pop()                         # Get and remove a random item, if set empty -> throws an error
