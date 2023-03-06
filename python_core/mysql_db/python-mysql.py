@@ -60,7 +60,6 @@ def insert():
     )
 """
 
-
 def description():
     with closing(connector.connect(**connection_properties)) as mysql_connect:
         cursor = mysql_connect.cursor()

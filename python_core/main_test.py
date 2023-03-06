@@ -1,15 +1,25 @@
-def minimalKSum(nums, k):
-    missing = []
-    i, count = 1, 0
-    while count != k:
-        if i not in nums:
-            missing.append(i)
-            count = count + 1;
-        i = i + 1
-    return sum(missing)
+from getpass import getpass
+from mysql_db.connector import connect, Error
+
+try:
+    with connect(
+        host="localhost",
+        user=input("Enter username: "),
+        password=getpass("Enter password: "),
+    ) as connection:
+        print(connection)
+except Error as e:
+    print(e)
 
 
-if __name__ == '__main__':
-    # result = minimalKSum([1, 4, 25, 10, 25], 2)
-    result = minimalKSum([5, 6], 6)
-    print(result)
+connection_properties = {
+    'host': 'localhost',
+    'port': 3306,
+    'user': "root",
+    'password': "root",
+    'database': 'w3schools'
+}
+
+cnx = mysql.connector.connect(**connection_properties)
+cnx.close()
+
