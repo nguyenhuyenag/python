@@ -53,6 +53,11 @@ def zerofill():
     print("Zfill:", "new_one".zfill(10))
 
 
+def swapcase():
+    s = "aBC"
+    print(s.swapcase())
+
+
 # count()
 # capitalize()
 # find_and_index()
@@ -60,4 +65,5 @@ def zerofill():
 # join_string_array()
 # trim_a_string()
 # partition()
-zerofill()
+# zerofill()
+swapcase()

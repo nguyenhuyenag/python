@@ -5,7 +5,7 @@ def create_dict():
 
 
 def fromkeys():
-    keys = {'a', 'e', 'i', 'o', 'u'}
+    keys = {'a', 'b', 'c'}
     value = [1]
     vowels = dict.fromkeys(keys, value)
     print(vowels)
@@ -33,28 +33,38 @@ def get_dict_value():
     di = {'age': 22, 'name': 'Green'}
     # print(di['class'])            # -> KeyError: 'class'
     # print(di.get('class'))        # -> None
-    print(di.get('class', '0'))     # -> 0
+    print(di.get('class', '0'))  # -> 0
 
 
 def dict_api():
     dic = {'age': 17, 'name': 'Green', "country": "US", "job": "Student"}
 
-    dic.pop("age")                  # Remove the item with the specified key
-    dic.popitem()                   # Remove the last item
+    dic.pop("age")  # Remove the item with the specified key
+    dic.popitem()  # Remove the last item
 
-    dic["name"] = "Red"             # Change value
-    dic.setdefault("name", "Red")   # None is default
+    dic["name"] = "Red"  # Change value
+    dic.setdefault("name", "Red")  # None is default
 
-    dic.keys()                  # Return the list of keys as a view object
-    dic.items()                 # Return list of (key, value). If list is updated, items will change (view object)
+    dic.keys()  # Return the list of keys as a view object
+    dic.items()  # Return list of (key, value). If list is updated, items will change (view object)
 
     # dic.copy()                    # Shallow copy
     # dict.clear()                  # Delete dict
     print(dic)
 
 
+def keys_and_items():
+    dic = {'a': 1, 'b': 2, 'c': 3}
+    for k, v in zip(dic.keys(), dic.values()):
+        print(k, v)
+    # Or
+    for k, v in dic.items():
+        print(k, v)
+
+
 # create_dict()
-fromkeys()
+# fromkeys()
 # merge_dict()
 # get_dict_value()
 # dict_api()
+keys_and_items()
