@@ -25,6 +25,9 @@ def merge_dict():
     z = dict(x, **y)
     print("Merge by dict(): ", y)
 
+    # z = x | z         # ->    python 3.9+
+    # print(z)
+
 
 def get_dict_value():
     di = {'age': 22, 'name': 'Green'}

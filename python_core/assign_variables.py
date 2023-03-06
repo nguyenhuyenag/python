@@ -1,12 +1,26 @@
 # Assign multiple variables
-x, y, z = "orange", "banana", 2
-print(x, y, z)
+def assign1():
+    x, y, z = 1, 2, "3"
+    print(x, y, z)
+
 
 # One value to multiple variables
-x = y = z = "orange"
-print(x, y, z)
+def assign2():
+    x = y = z = "orange"
+    print(x, y, z)
+
 
 # Unpack a collection
-fruits = ["banana", "strawberry", "cherry"]
-x, y, z = fruits
-print(x, y, z)
+def assign3():
+    fruits = ["banana", "strawberry", "cherry"]
+    x, y, z = fruits
+    print(x, y, z)
+
+
+# Get all items in the middle of the list
+def assign4():
+    _, *elements_in_the_middle, _ = [1, 2, 3, 4, 5]
+    print(elements_in_the_middle)  # [2, 3, 4]
+
+
+assign4()

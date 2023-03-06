@@ -12,7 +12,21 @@ def simple_generator():
     yield 2
     yield 3
 
+# # Driver code to check above generator function
+# for value in simple_generator():
+#     print(value)
+
+### Generators created using yield keyword
+def fibonacci_series(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
 
 # Driver code to check above generator function
-for value in simple_generator():
-    print(value)
+for number in fibonacci_series(10):
+    print(number)
+
+
+
+
