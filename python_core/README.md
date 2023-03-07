@@ -1,4 +1,4 @@
-Pycharm
+# Pycharm Settings
 
 - Debug
   - Step by step                F8
@@ -24,6 +24,7 @@ Pycharm
 - File class name                Ctrl + N
 - Go to line                     Ctrl + G
 - Run current                    Shift + F10
+- Extract variable               Ctrl + Alt + V
 
 See more
 
