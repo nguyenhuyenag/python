@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # pools = ThreadPoolExecutor(max_workers=2)
     with ThreadPoolExecutor(max_workers=2) as pools:
         # create and submit worker to pool
-        for i in range(1, 6):
+        for i in range(1, 4):
             v1 = random.choice([1, 2, 3, 4, 5])
             v2 = random.choice([1, 2, 3, 4, 5])
             future = pools.submit(worker, i, v1, v2)
