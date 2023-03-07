@@ -25,6 +25,7 @@
 - Go to line                     Ctrl + G
 - Run current                    Shift + F10
 - Extract variable               Ctrl + Alt + V
+- Open CMD                       Alt + F12
 
 See more
 

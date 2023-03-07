@@ -17,8 +17,8 @@ def print_format():
 
 def print_parameters():
     print('words', 'with', 'commas', 'in', 'between', sep=', ')
-    print("11", "12", "2023", sep="/")  # 29/01/2022
-    print("name", "domain.com", sep="@")  # name@domain.com
+    print("11", "12", "2023", sep="/")      # 29/01/2022
+    print("name", "domain.com", sep="@")    # name@domain.com
 
 
 # print_format()
