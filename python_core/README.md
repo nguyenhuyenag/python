@@ -28,5 +28,6 @@
 - Open CMD                       Alt + F12
 
 See more
-
+    
+    - pip3 install --upgrade <package name>
     - pip install more-itertools
