@@ -1,6 +1,7 @@
 import numpy as np
 
 
+# Chia list thành n list con
 def split1(alist, sub_list):
     my_list2 = np.array_split(alist, sub_list)
     my_list2 = [v.tolist() for v in my_list2]
@@ -19,29 +20,28 @@ def split3(alist, sub_list):
     print(my_list2)
 
 
-def split4(alist, chunk_size):
+def split4(alist, sub_list):
+    result = []
+    for i in reversed(range(1, sub_list + 1)):
+        split_point = len(alist) // i
+        result.append(alist[:split_point])
+        alist = alist[split_point:]
+    print(result)
+
+
+# Chia list thành list con có kích thước <= chunk_size <= len(alist)
+def split_by_size(alist, chunk_size):
     my_list2 = [alist[i:i + chunk_size] for i in range(0, len(alist), chunk_size)]
     print(my_list2)
 
 
-# def split5(alist, sub_list):
-#     my_list2 = [alist[i::n] for i in range(sub_list)]
-#     print(my_list2)
-
-def split5(alist, sub_list):
-    splitted = []
-    for i in reversed(range(1, sub_list + 1)):
-        split_point = len(alist) // i
-        splitted.append(alist[:split_point])
-        alist = alist[split_point:]
-    print(splitted)
-
-
-n = 3
-arr = [1, 2, 3, 4, 5, 6, 7, 8]
-
-# split1(arr, n)
-# split2(arr, n)
-# split3(arr, n)
-# split4(arr, n)
-split5(arr, n)
+if __name__ == '__main__':
+    n = 4
+    arr = [i for i in range(1, 4 + 1)]
+    print(arr)
+    print(f"{n} sub list")
+    # split1(arr, n)
+    # split2(arr, n)
+    # split3(arr, n)
+    split4(arr, n)
+    # split_by_size(arr, n)
