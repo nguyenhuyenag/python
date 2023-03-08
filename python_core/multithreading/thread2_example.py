@@ -1,35 +1,23 @@
-import time
-import concurrent.futures
+from time import sleep
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import wait
 
 
-def worker(alist, name):
-    print(f"Thread {name}")
-    return sum([i ** i for i in alist])
-
-def split(alist, sub_list):
-    splitted = []
-    for i in reversed(range(1, sub_list + 1)):
-        split_point = len(alist) // i
-        splitted.append(alist[:split_point])
-        alist = alist[split_point:]
-
-    return splitted
-
-def thread_test():
-    arr = [i for i in range(100)]
-    arr = split(arr, 5)
-    # print(arr)
-    # return
-    threaded_start = time.time()
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = []
-        for i, v in enumerate(arr):
-            futures.append(executor.submit(worker, v, i))
-        for future in concurrent.futures.as_completed(futures):
-            print(future.result())
-    print("Threaded time:", time.time() - threaded_start)
+# mock task that will sleep for a moment
+def work(sleep_time):
+    sleep(sleep_time)
 
 
-if __name__ == '__main__':
-    thread_test()
-
+# create a thread pool
+with ThreadPoolExecutor(1) as executor:
+    # start a long running task
+    _ = executor.submit(work, 1)
+    # start a second task
+    future = executor.submit(work, 0.1)
+    print(f'running={future.running()}, cancelled={future.cancelled()}, done={future.done()}')
+    # cancel the second task
+    was_cancelled = future.cancel()
+    print(f'Cancelled: {was_cancelled}')
+    # wait for the second task to complete
+    wait([future])
+    print(f'running={future.running()}, cancelled={future.cancelled()}, done={future.done()}')
