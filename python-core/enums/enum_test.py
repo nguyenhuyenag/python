@@ -12,9 +12,11 @@ class Days(Enum):
     SAT = 'Saturday'
     SUN = 'Sunday'
 
+
 Color = Enum('MyColor', [('RED', 3), ('GREEN', 5), ('BLUE', 4)])
 
-# @enum.unique -> Đánh dấu class chỉ chứa nững giá trị duy nhất
+
+# @enum.unique -> Đánh dấu class chỉ chứa những giá trị duy nhất
 class ResponseStatus(Enum):
     # in progress
     IN_PROGRESS = 1
@@ -40,6 +42,7 @@ def todo():
     # print("Enum check:", Days.Mon in Days)
     # print(Numbers.ONE + Numbers.TWO == 3)
     print([(weekday.name, weekday.value) for weekday in Days])
+
 
 def how_to_use():
     code = 'OK'
