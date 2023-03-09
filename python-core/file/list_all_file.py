@@ -4,7 +4,7 @@ from os import walk
 import glob
 
 
-path = "D:/Dev/Projects/Github/python/python_core/"
+path = "//"
 
 
 def list_file_without_subdir():

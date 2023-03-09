@@ -4,7 +4,7 @@ import pathlib
 # from pathlib import Path
 # from os.path import exists
 
-pathfile = "D:/Dev/Projects/Github/python/python_core/mysqldb/connectors.cnf"
+pathfile = "D:/Dev/Projects/Github/python/python-core/mysqldb/connectors.cnf"
 
 # Using exists()
 print(os.path.exists(pathfile))
