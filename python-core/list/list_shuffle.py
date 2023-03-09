@@ -13,7 +13,7 @@ def shuffle_string():
     li = list("abcdefgh")
     shuffle(li)
     result = ''.join(li)
-    print("Shuffle string_type: {} -> {}".format(s, result))
+    print("Shuffle string_char: {} -> {}".format(s, result))
 
 
 shuffle_list()
