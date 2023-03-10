@@ -1,6 +1,5 @@
 import base64
-
-from file.file_utils import read_file_to_bytes
+from file.file_utils import read_file_to_bytes, read_file_to_string
 
 """
     Why do I need 'b' to encode a string with Base64?
@@ -11,10 +10,23 @@ from file.file_utils import read_file_to_bytes
     data = base64.b64encode(input.encode())    
 """
 
+
+def b64e(s):
+    # decode(): b'SGVs...'      ->      'SGVs...'
+    return base64.b64encode(s).decode()
+
+
+def b64d(s):
+    return base64.b64decode(s).decode()
+
+
 if __name__ == '__main__':
-    file = "base64_sample.py"
+    file = r"D:\Dev\Projects\Github\python\python-core\file\data.txt"
     data = read_file_to_bytes(file)
-    print(data)
-    base64_str = base64.b64encode(data)
-    print(base64_str)
-    print(base64.b64decode(base64_str))
+    # print(data)
+
+    encode = b64e(data)
+    print(encode)
+
+    decode = b64d(encode.encode())
+    print(decode)

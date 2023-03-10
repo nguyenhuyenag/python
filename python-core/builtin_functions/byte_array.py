@@ -1,7 +1,7 @@
 def sting_bytes():
     message = 'Python is fun'
     byte_message = bytes(message, 'utf-8')  # an immutable bytes
-    # byte_message[0] = 1                   # TypeError: 'bytes' object does not support item assignment
+    # byte_message[0] = 1                   # -> TypeError 'bytes' object does not support item assignment
     print(list(byte_message))
 
 

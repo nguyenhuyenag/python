@@ -1,5 +1,8 @@
-import traceback
-from contextlib import closing
+def write_bytes_to_file():
+    filename = None
+    filebytes = None
+    with open(filename, 'wb') as f:
+        f.write(filebytes)
 
 
 def read_file_into_list():
@@ -8,22 +11,26 @@ def read_file_into_list():
 
 
 def read_file_to_string(path_file: str) -> str:
-    contents = ""
-    try:
-        with closing(open(path_file)) as file_contents:
-            for line in file_contents:
-                contents += line
-    except FileNotFoundError as e:
-        traceback.print_exc(limit=1)
-    return contents
+    # contents = ""
+    # try:
+    #     with closing(open(path_file)) as file_contents:
+    #         for line in file_contents:
+    #             contents += line
+    # except FileNotFoundError as e:
+    #     traceback.print_exc(limit=1)
+    # return contents
+    byte_array = read_file_to_bytes(path_file)
+    return str(byte_array, 'utf-8')  # Or -> byte_array.decode('utf-8')
 
 
-def read_file_to_bytes(path_file: str) -> bytes:
-    contents = read_file_to_string(path_file)
-    return bytes(contents.encode('utf-8'))
+def read_file_to_bytes(path_file: str) -> bytearray:
+    with open(path_file, 'rb') as file_content:
+        f = file_content.read()
+        return bytearray(f)
 
 
 if __name__ == '__main__':
     file = "data.txt"
     data = read_file_to_bytes(file)
-    print(data)
+    # data = read_file_to_string(file)
+    # print(data)

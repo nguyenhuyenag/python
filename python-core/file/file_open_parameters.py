@@ -7,8 +7,8 @@ Open parameters
     'w'  -   Write, will overwrite any existing content
     'x'  -   Create, will create a file, returns an error if the file exist
 
-    't'  -   Open in text mode. (default)
-    'b'  -   Open in binary mode.
+    't'  -   Open in text mode (default)
+    'b'  -   Open in binary mode
     '+'  -   Open a file for updating (reading and writing)
 """
 
