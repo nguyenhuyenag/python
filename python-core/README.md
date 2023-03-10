@@ -30,4 +30,5 @@
 See more
     
     - pip3 install --upgrade <package name>
-    - pip install more-itertools
+
+    - pip install pip_search    ->      pip_search mysql
