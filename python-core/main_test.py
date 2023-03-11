@@ -1,17 +1,21 @@
-from enum import Enum
-from collections import namedtuple
-
-Color = namedtuple('Color', ['value', 'displayString'])
+from collections import UserDict
 
 
-class Colors(Enum):
+class mydata(UserDict):
 
-    @property
-    def displayString(self):
-        return self.value.displayString
+    def pop(self, s=None):
+        raise RuntimeError("Deletion not allowed")
 
-    yellow = Color(1, 'Yellow')
-    green = Color(2, 'Green')
+    def append(self, s=None):
+        raise RuntimeError("Append not allowed")
 
 
-print(Colors.yellow.displayString)
+mydict = mydata({'x': 10, 'y': 20})
+
+# print(mydict)
+
+# Deliting From Dict
+# mydict.pop()
+
+# Append not allowed
+mydict.append({'z': 5})

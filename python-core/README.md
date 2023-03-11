@@ -8,8 +8,10 @@
     File > Setting > Inlay Hints > Code Vision > Code author
 
 - Shortcut setting
-    
     File > Setting > Search 'Keymap'
+
+- Disable check spelling
+    File -> Settings -> Editor -> Inspections > Typo (uncheck)
 
 - Cut line                       Ctrl + X
 - Delete line                    Ctrl + X

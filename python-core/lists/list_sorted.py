@@ -1,5 +1,5 @@
 """
-    Sort by length: list.sort(key=len) = sorted(list, key=len)
+    Sort by length: lists.sort(key=len) = sorted(lists, key=len)
 """""
 
 

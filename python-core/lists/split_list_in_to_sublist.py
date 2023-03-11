@@ -1,7 +1,7 @@
 import numpy as np
 
 
-# Chia list thành n list con
+# Chia lists thành n lists con
 def split1(alist, sub_list):
     my_list2 = np.array_split(alist, sub_list)
     my_list2 = [v.tolist() for v in my_list2]
@@ -29,7 +29,7 @@ def split4(alist, sub_list):
     print(result)
 
 
-# Chia list thành list con có kích thước <= chunk_size <= len(alist)
+# Chia lists thành lists con có kích thước <= chunk_size <= len(alist)
 def split_by_size(alist, chunk_size):
     my_list2 = [alist[i:i + chunk_size] for i in range(0, len(alist), chunk_size)]
     print(my_list2)

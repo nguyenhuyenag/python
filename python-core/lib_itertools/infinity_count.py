@@ -4,7 +4,7 @@ from itertools import count
 
 def func_count():
     iterator = count(start=3, step=3)
-    print("Even list:", list(next(iterator) for _ in range(5)))
+    print("Even lists:", list(next(iterator) for _ in range(5)))
 
 
 # count(10) --> 10 11 12 13 14 ...
