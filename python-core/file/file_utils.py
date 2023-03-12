@@ -1,8 +1,15 @@
-def write_bytes_to_file():
-    filename = None
-    filebytes = None
-    with open(filename, 'wb') as f:
+import os
+
+from path_directory.directory import get_parent
+
+
+def write_bytes_to_file(filepath, filebytes):
+    parent = get_parent(filepath)
+    if not os.path.exists(parent):
+        os.mkdir(parent)
+    with open(filepath, 'wb') as f:
         f.write(filebytes)
+    return filepath
 
 
 def read_file_into_list():
@@ -11,14 +18,6 @@ def read_file_into_list():
 
 
 def read_file_to_string(path_file: str) -> str:
-    # contents = ""
-    # try:
-    #     with closing(open(path_file)) as file_contents:
-    #         for line in file_contents:
-    #             contents += line
-    # except FileNotFoundError as e:
-    #     traceback.print_exc(limit=1)
-    # return contents
     byte_array = read_file_to_bytes(path_file)
     return str(byte_array, 'utf-8')  # Or -> byte_array.decode('utf-8')
 

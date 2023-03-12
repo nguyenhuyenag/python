@@ -1,13 +1,25 @@
+import pathlib
 from os import path
-import shutil, os, ntpath, posixpath
-from pathlib import PureWindowsPath, PurePosixPath
+import os, ntpath, posixpath, shutil
+from pathlib import Path, PurePosixPath, PureWindowsPath
+
+
+def get_parent(your_path):
+    from_path = Path(your_path)
+    return from_path.parent.absolute()
+
+
+def get_current_path_file():
+    path_of_file = pathlib.Path(__file__)
+    print(path_of_file)
 
 
 # Get Current Directory in Python
 def get_current_dir():
     d = path.dirname(path.dirname(__file__))
-    print("Dirname: ", d)
-    print("CWD: ", os.getcwd())
+    print("Project Directory:", d)
+    print(Path.cwd())
+    print(os.getcwd())
     # d = dirname(dirname(abspath(__file__)))
     # print("Abspath: ", d)
     # ROOT_DIR = os.path.abspath(os.curdir)
@@ -57,10 +69,12 @@ def fixpath():
     print(win)  # foo\bar\file.txt
 
 
+# get_current_path_file()
 # get_current_dir()
 # create_folder()
 # rename_folder()
 # delete_empty_folder()
 # delete_any_folder()
-join_path()
+# join_path()
 # fixpath()
+# get_parent()
