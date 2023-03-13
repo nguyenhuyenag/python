@@ -1,5 +1,5 @@
 import base64
-from file.file_utils import read_file_to_bytes, read_file_to_string
+from file.file_utils import read_file_to_bytes
 
 """
     Why do I need 'b' to encode a string with Base64?
@@ -12,7 +12,7 @@ from file.file_utils import read_file_to_bytes, read_file_to_string
 
 
 def b64e(s):
-    # decode(): b'SGVs...'      ->      'SGVs...'
+    # decode() convert      b'SGVs...'      ->      'SGVs...'
     return base64.b64encode(s).decode()
 
 

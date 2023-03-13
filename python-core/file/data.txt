@@ -1,3 +1,19 @@
-Hello! Welcome to Python
-This file is for testing purposes.
-Good Luck!
+id
+message_main_attachment_id
+name
+currency_id
+code
+deprecated
+user_type_id
+internal_type
+internal_group
+reconcile
+note
+company_id
+group_id
+root_id
+is_off_balance
+create_uid
+create_date
+write_uid
+write_date

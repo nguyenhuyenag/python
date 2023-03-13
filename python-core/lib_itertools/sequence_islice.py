@@ -9,5 +9,6 @@ from itertools import islice
 
 # Slicing the range function
 print(list(range(20)))
+
 for i in islice(range(20), 5):
     print(i)
