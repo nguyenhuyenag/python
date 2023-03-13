@@ -27,7 +27,7 @@ def using_glob2(path):
 
 
 if __name__ == '__main__':
-    path = r"D:\Dev\Projects\Github\python\python-core\file"
+    path = r"/path_file"
     using_walk(path)
     # using_glob1()
     # using_glob2()

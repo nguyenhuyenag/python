@@ -29,7 +29,7 @@ def read_file_into_list(_file):
 
 if __name__ == '__main__':
     file = "data.txt"
-    # data = read_file_to_bytes(file)
-    # data = read_file_to_string(file)
+    # data = read_file_to_bytes(path_file)
+    # data = read_file_to_string(path_file)
     data = read_file_into_list(file)
     print(data)

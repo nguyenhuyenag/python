@@ -44,6 +44,9 @@ def delete_empty_folder():
 
 
 def delete_any_folder():
+    # os.remove("filename")     # error if not found
+    # os.rmdir("folder")        # error if not empty, or not found
+    # shutil.rmtree("folder")   # works for non-empty directories
     if os.path.isdir('new_one'):
         shutil.rmtree("new_one")
 
@@ -61,12 +64,12 @@ def fixpath():
     # Windows -> Posix
     win = r'foo\bar\file.txt'
     posix = str(PurePosixPath(PureWindowsPath(win)))
-    print(posix)  # foo/bar/file.txt
+    print(posix)  # foo/bar/path_file.txt
 
     # Posix -> Windows
-    posix = 'foo/bar/file.txt'
+    posix = 'foo/bar/path_file.txt'
     win = str(PureWindowsPath(PurePosixPath(posix)))
-    print(win)  # foo\bar\file.txt
+    print(win)  # foo\bar\path_file.txt
 
 
 # get_current_path_file()
@@ -76,5 +79,5 @@ def fixpath():
 # delete_empty_folder()
 # delete_any_folder()
 # join_path()
-# fixpath()
+fixpath()
 # get_parent()

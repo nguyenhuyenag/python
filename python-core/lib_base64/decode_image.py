@@ -1,6 +1,6 @@
 import base64
 
-from file.file_utils import read_file_to_bytes
+from path_file.file_utils import read_file_to_bytes
 
 base64_img = 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAA' \
             'LEwEAmpwYAAAB1klEQVQ4jY2TTUhUURTHf+fy/HrjhNEX2KRGiyIXg8xgSURuokX' \

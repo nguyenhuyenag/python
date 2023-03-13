@@ -37,7 +37,7 @@ def string_to_integer():
 
 
 # def read_file_into_list():
-#     file_content = [line.strip() for line in open("file/data-file.txt", "r")]
+#     file_content = [line.strip() for line in open("path_file/data-path_file.txt", "r")]
 #     print(file_content)
 
 
