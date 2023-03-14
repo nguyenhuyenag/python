@@ -7,7 +7,6 @@ def method_name():
     print(calendar.month(yy, mm))
     # Or
     print(calendar.calendar(yy))
-    calendar.
 
 
 method_name()
