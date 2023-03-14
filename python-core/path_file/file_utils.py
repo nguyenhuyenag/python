@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from path_directory.directory import get_parent
 
@@ -27,9 +28,19 @@ def read_file_into_list(_file):
     return [line.strip() for line in open(_file, "r")]
 
 
+def rename(path_file):
+    # os.rename(old_name, new_name)
+    f = Path(path_file)
+    new_name = f"{f.stem}_new{f.suffix}"
+    f.rename(new_name)
+
+
 if __name__ == '__main__':
-    file = "data.txt"
+    # file = "data.txt"
     # data = read_file_to_bytes(path_file)
     # data = read_file_to_string(path_file)
-    data = read_file_into_list(file)
-    print(data)
+    # data = read_file_into_list(file)
+    # print(data)
+
+    myfile = r'C:\Users\huyennv\Desktop\test\test1.txt'
+    rename(myfile)

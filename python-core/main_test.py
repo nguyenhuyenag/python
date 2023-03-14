@@ -1,7 +1,6 @@
-# Path
-import os
+import calendar
 
-path = "/home"
+yy = 2022          # year
+mm = 4             # month
 
-# Join various path components
-print(os.path.join(path, "User/Public/", "Documents", ""))
+print(calendar.month(yy, mm))

@@ -3,20 +3,20 @@ from os import walk, listdir
 from os.path import isfile, join
 
 
-def list_file_without_subdir(path):
-    onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
+def list_file_without_subdir(p):
+    onlyfiles = [f for f in listdir(p) if isfile(join(p, f))]
     print(onlyfiles)
 
 
-def using_walk(path):
-    for (dirpath, dirnames, filenames) in walk(path):
+def using_walk(p):
+    for (dirpath, dirnames, filenames) in walk(p):
         for file in filenames:
             if file.endswith(".py"):
                 print(file)
 
 
-def using_glob1(path):
-    print(glob.glob(path + "*"))
+def using_glob1(p):
+    print(glob.glob(p + "*"))
 
 
 def using_glob2(path):
@@ -27,8 +27,8 @@ def using_glob2(path):
 
 
 if __name__ == '__main__':
-    path = r"/path_file"
-    using_walk(path)
+    p = r"/path_file"
+    using_walk(p)
     # using_glob1()
     # using_glob2()
     # list_file_without_subdir()

@@ -60,6 +60,10 @@ def join_path():
     print("Windows -> ", abs_file_path.replace(os.sep, ntpath.sep))
 
 
+"""
+    - posixpath for UNIX-style paths
+    - ntpath    for Windows paths
+"""
 def fixpath():
     # Windows -> Posix
     win = r'foo\bar\file.txt'
