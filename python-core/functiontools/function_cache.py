@@ -1,5 +1,5 @@
 import time
-from functools import cache
+from functools import cache, lru_cache
 
 
 def cal(n):
@@ -9,7 +9,8 @@ def cal(n):
         return cal(n - 1) + cal(n - 2)
 
 
-@cache
+# @cache
+@lru_cache(maxsize=128)
 def cal_cache(n):
     if n < 2:
         return n

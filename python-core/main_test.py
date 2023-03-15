@@ -1,52 +1,36 @@
+from functools import lru_cache
 import time
-from functools import cache
 
-def cal(n):
+
+def fib_without_cache(n):
     if n < 2:
         return n
-    else:
-        return cal(n - 1) + cal(n - 2)
+    return fib_without_cache(n - 1) + fib_without_cache(n - 2)
 
 
-@cache
-def cal_cache(n):
+# Execution start time
+begin = time.time()
+fib_without_cache(30)
+
+# Execution end time
+end = time.time()
+
+print("Time taken to execute the\
+function without lru_cache is", end - begin)
+
+
+# Function that computes Fibonacci
+# numbers with lru_cache
+@lru_cache(maxsize=128)
+def fib_with_cache(n):
     if n < 2:
         return n
-    else:
-        return cal(n - 1) + cal(n - 2)
+    return fib_with_cache(n - 1) + fib_with_cache(n - 2)
 
 
-def cal_dp(n):
-    arr = [0, 1]
-    for i in range(2, n + 1):
-        arr.append(arr[i - 1] + arr[i - 2])
+begin = time.time()
+fib_with_cache(30)
+end = time.time()
 
-    return arr[n]
-
-
-def method_name():
-    n = 35
-
-    # Without @cache
-    t1 = time.time()
-    f = cal(n)
-    t2 = time.time()
-    print(f"KQ = {f}")
-    print(f"Time (no @cache) = {t2 - t1}")
-
-    # Use @cache
-    t1 = time.time()
-    f = cal_cache(n)
-    t2 = time.time()
-    print(f"KQ = {f}")
-    print(f"Time (@cache) = {t2 - t1}")
-
-    # Use DP
-    t1 = time.time()
-    f = cal_dp(n)
-    t2 = time.time()
-    print(f"KQ = {f}")
-    print(f"Time (DP) = {t2 - t1}")
-
-
-method_name()
+print("Time taken to execute the \
+function with lru_cache is", end - begin)

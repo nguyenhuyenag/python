@@ -32,6 +32,7 @@
 
 # Python CMD
     
+    - pip list --outdate
     - pip3 install --upgrade <package name>
     - pip install pip_search            ->      pip_search mysql
     
