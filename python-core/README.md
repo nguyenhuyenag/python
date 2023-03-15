@@ -30,8 +30,16 @@
 - Extract variable                  Ctrl + Alt + V
 - Open CMD                          Alt + F12
 
-See more
+# Python CMD
     
     - pip3 install --upgrade <package name>
-
-    - pip install pip_search    ->      pip_search mysql
+    - pip install pip_search            ->      pip_search mysql
+    
+- File `requirements.txt`
+    
+    - Create
+        >   pip install pipreqs
+        >   pipreqs
+    - Run
+      > pip install -r requirements.txt
+    

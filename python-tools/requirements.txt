@@ -1,0 +1,2 @@
+rembg==2.0.30
+opencv_python_headless==4.6.0.66

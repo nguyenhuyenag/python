@@ -21,8 +21,9 @@ def using_timer():
     print("Time =", end - start)
 
 
-# Use a decorator
+# Use a decorator (see decorators.py)
 def timer_func_decorator(func):
+
     def wrapper(*args, **kwargs):
         t1 = timer()
         result = func(*args, **kwargs)

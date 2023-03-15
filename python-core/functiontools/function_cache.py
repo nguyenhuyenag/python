@@ -1,6 +1,7 @@
 import time
 from functools import cache
 
+
 def cal(n):
     if n < 2:
         return n
@@ -24,8 +25,18 @@ def cal_dp(n):
     return arr[n]
 
 
+def cal_dp2(n):
+    arr = (n + 1) * [0]
+    # arr[0] = 0
+    arr[1] = 1
+    for i in range(2, n + 1):
+        arr[i] = arr[i - 1] + arr[i - 2]
+
+    return arr[n]
+
+
 def method_name():
-    n = 35
+    n = 30
 
     # Without @cache
     t1 = time.time()
@@ -43,7 +54,7 @@ def method_name():
 
     # Use DP
     t1 = time.time()
-    f = cal_dp(n)
+    f = cal_dp2(n)
     t2 = time.time()
     print(f"KQ = {f}")
     print(f"Time (DP) = {t2 - t1}")

@@ -22,3 +22,4 @@ def sort_complex():
 
 # sort_in_place()
 sort_complex()
+# sorted(student_objects, key=lambda student: student.age)   # sort by age
