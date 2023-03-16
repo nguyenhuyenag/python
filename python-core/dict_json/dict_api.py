@@ -62,9 +62,9 @@ def keys_and_items():
         print(k, v)
 
 
-# create_dict()
+create_dict()
 # fromkeys()
 # merge_dict()
 # get_dict_value()
 # dict_api()
-keys_and_items()
+# keys_and_items()

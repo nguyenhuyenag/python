@@ -1,6 +1,7 @@
-from concurrent.futures import as_completed
+import random
+import time
 from concurrent.futures import ThreadPoolExecutor
-import random, time
+from concurrent.futures import as_completed
 
 
 def worker(thread_name, a, b, flag: bool):

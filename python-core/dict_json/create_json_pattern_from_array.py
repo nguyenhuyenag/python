@@ -19,6 +19,6 @@ def create_json(list_fields, object_name):
     print("{\n" + data + "\n}")
 
 
-fields = ['id', 'name', 'currency_id', 'code', 'create_uid', 'create_date', 'write_uid', 'write_date']
+fields = ['id', 'name', 'currency_id', 'code', 'create_uid', 'create_date', 'write_date']
 
 create_json(fields, "val")
