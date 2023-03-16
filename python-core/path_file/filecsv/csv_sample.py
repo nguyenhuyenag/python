@@ -17,10 +17,10 @@ def write_dict():
     with open('employees_dict.csv', 'w') as csv_file:
         header = ['name', 'id', 'age', 'department', 'likes_pizza']
         data = [
-            ['Jess', '006', '32', 'accounting', True],
-            ['Lisa', '007', '21', 'engineering', False],
             ['Jack', '008', '20', 'sales', True],
+            ['Jess', '006', '32', 'accounting', True],
             ['Wendy', '009', '22', 'accounting', True],
+            ['Lisa', '007', '21', 'engineering', False],
         ]
         writer = csv.DictWriter(csv_file, fieldnames=header, lineterminator='\n')
         writer.writeheader()
@@ -32,7 +32,7 @@ def write_dict():
 def read_normal():
     with open(filename) as csv_file:
         reader = csv.reader(csv_file)
-        # reader = csv.reader(csv_file, delimiter=';')
+        # reader = csv.reader(csv_file, delimiter=',', quotechar='"')
         for row in reader:
             print(row)
 
@@ -45,5 +45,5 @@ def add_header_to_csv():
 
 # write_normal()
 # write_dict()
-# read_normal()
-add_header_to_csv()
+read_normal()
+# add_header_to_csv()
