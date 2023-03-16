@@ -12,13 +12,13 @@ def normal():
     print(counts)
 
 
-def todo():
+def using_defaultdict():
     arr = 'abdacvcdcscbcbgnmnnb'
     counts = defaultdict(lambda : 0)
-    for key in list(arr):
+    for key in arr:
         counts[key] += 1
     print(counts.items())
 
 
 normal()
-todo()
+using_defaultdict()

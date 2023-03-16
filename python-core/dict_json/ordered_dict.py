@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-# Dict theo thứ tự chèn
+# Dictionary theo thứ tự chèn
 _ordered = OrderedDict()
 _ordered['z'] = 1
 _ordered['r'] = 3

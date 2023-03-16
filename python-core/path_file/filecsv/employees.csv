@@ -1,0 +1,5 @@
+name,id,age,department,likes_pizza
+James,1,22,sales,True
+John,2,28,engineering,False
+Jessica,3,25,engineering,True
+Monica,4,29,accounting,False
