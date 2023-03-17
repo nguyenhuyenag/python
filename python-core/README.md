@@ -39,8 +39,10 @@
 - File `requirements.txt`
     
     - Create
-        >   pip install pipreqs
-        >   pipreqs
+        > pip install pipreqs
+        > pipreqs
     - Run
       > pip install -r requirements.txt
+      > If else conditions
+      
     
