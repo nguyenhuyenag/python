@@ -1,5 +1,6 @@
 """
-    The with statement clarifies code that previously would use try...finally blocks to ensure that clean-up code is executed.
+    The with statement clarifies code that previously would use try...finally blocks to ensure that clean-up code is executed
+
     The with statement is a control-flow structure whose basic structure is:
 
     with expression [as variable]:
