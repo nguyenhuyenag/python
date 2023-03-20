@@ -43,6 +43,6 @@
         > pipreqs
     - Run
       > pip install -r requirements.txt
-      > If else conditions
+      > If else conditions in requirements.txt
       
     
