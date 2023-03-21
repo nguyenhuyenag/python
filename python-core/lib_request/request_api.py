@@ -33,5 +33,11 @@ def response_with_try_catch():
             print('Success!')
 
 
+def timeout():
+    requests.get('https://github.com/', timeout=0.001)
+
+
+
+# show_req_info()
 # response_with_try_catch()
-show_req_info()
+timeout()
