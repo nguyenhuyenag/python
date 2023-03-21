@@ -7,20 +7,18 @@ def show_req_info():
     res = requests.get('https://httpbin.org/get', params=payload)
     # req = requests.post('https://httpbin.org/post', data={'key': 'value'})
 
-    # print("status_code:", res.status_code)
-
-    print("header:", res.headers)
-
-    # print("encoding", res.encoding)
-
-    # print("text:", res.text)
-    # print("content:", res.content)        # = bytyes(res.text)
-    # print(res.json())                     # = json(res.text)
-
+    print(f"Status Code: {res.status_code}, Reason: {res.reason}")
+    # print("Header:", res.headers)
+    # print("Encoding", res.encoding)
+    # print("Response Content:", res.text)
+    # print("Binary Response Content:", res.content)      # = bytyes(res.text)
+    # print("JSON Response Content:", res.json())         # = json(res.text)
+    # print("Raw Response Content:", res.raw)
     # print("url:", res.url)
+    print(res.iter_lines())
 
 
-def todo():
+def response_with_try_catch():
     urls = ['https://api.github.com', 'https://api.github.com/invalid']
     for url in urls:
         try:
@@ -35,25 +33,5 @@ def todo():
             print('Success!')
 
 
-def query_string_parameters():
-    # Search GitHub's repositories for requests
-
-    # params = b'q=requests+language:python'
-    params = {'q': 'requests+language:python'}
-    # params = [('q', 'requests+language:python')]
-
-    headers = {'Accept': 'application/vnd.github.v3.text-match+json'}
-
-    response = requests.get('https://api.github.com/search/repositories', params=params, headers=headers)
-
-    # Inspect some attributes of the `requests` repository
-    res = response.json()
-    print("total_count:", res.get('total_count'))
-    repository = res.get('items')[0]
-    print(f'Repository name: {repository.get("name")}')
-    print(f'Repository description: {repository.get("description")}')
-
-
-# todo()
-# show_req_info()
-query_string_parameters()
+# response_with_try_catch()
+show_req_info()

@@ -36,12 +36,12 @@ def split_by_size(alist, chunk_size):
 
 
 if __name__ == '__main__':
-    n = 4
+    n = 6
     arr = [i for i in range(1, 4 + 1)]
     print(arr)
     print(f"{n} sub list")
     # split1(arr, n)
     # split2(arr, n)
-    # split3(arr, n)
-    split4(arr, n)
+    split3(arr, n)
+    # split4(arr, n)
     # split_by_size(arr, n)
