@@ -20,7 +20,7 @@ def use_urlencode():
 
 
 def use_requote():
-    encode = requote_uri("http://www.sample.com/?id=123 abc")
+    encode = requote_uri("https://www.sample.com/?id=123 abc")
     print(encode)
 
 
