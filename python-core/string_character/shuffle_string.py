@@ -2,7 +2,7 @@ from random import shuffle
 
 
 def shuffle_string():
-    s = "string_char"
+    s = "string_character"
     l = list(s)
     shuffle(l)
     result = ''.join(l)
@@ -11,4 +11,3 @@ def shuffle_string():
 
 
 shuffle_string()
-

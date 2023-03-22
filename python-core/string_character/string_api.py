@@ -1,20 +1,20 @@
-# Converts the first character of a string_char to an uppercase letter and all other alphabets to lowercase
+# Converts the first character of a string_character to an uppercase letter and all other alphabets to lowercase
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
     print(s.capitalize())
 
 
-# Return the number of times the value S appears in the string_char
+# Return the number of times the value S appears in the string_character
 def count():
-    str = "I Love apples, apple are MY Favorite fruit"
-    print("Count 'apple' -> ", str.count("apple"))
+    s = "I Love apples, apple are MY Favorite fruit"
+    print("Count 'apple' -> ", s.count("apple"))
 
 
 # find() ~ index(), the only difference is that the 'index()' method raises an exception if not found
 def find_and_index():
-    str = "Mi casa, su casa";
-    print("Index:", str.index("casa"))
-    print("Find:", str.find("casa"))
+    s = "Mi casa, su casa";
+    print("Index:", s.index("casa"))
+    print("Find:", s.find("casa"))
 
 
 def check_number_alpha():
@@ -37,7 +37,7 @@ def join_string_array():
     print("{} -> {}".format(di, "*".join(di)))
 
 
-# Trim a string_char
+# Trim a string_character
 def trim_a_string():
     txt = "           just                 "
     print("Python is", txt.strip(), "not funny")

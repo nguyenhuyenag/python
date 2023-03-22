@@ -31,6 +31,18 @@ def post_multiple_file():
     print(r.text)
 
 
+def call_api():
+    access_token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJodXllbm52Iiwic2NvcGVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJpYXQiOjE2Nzk0NzI0ODUsImV4cCI6MTY3OTU1ODg4NX0.6gwNvBE0WICiH9bqWql93dgD9xDkxp6ty6p2o1Ks7DBF25zwQx7gH0moFj6AjQoY559UoauBeegqPQB0obs-pA'
+    headers = {
+        # "Content-Type": "application/json; charset=utf-8",
+        'Authorization': 'Bearer {}'.format(access_token)
+    }
+    result = requests.get('http://localhost:8082/api/get-all-user', headers=headers)
+    print(result.status_code)
+    print(result.json())
+
+
 # post_json()
 # post_file()
-post_multiple_file()
+# post_multiple_file()
+call_api()
