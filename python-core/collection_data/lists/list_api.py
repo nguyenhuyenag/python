@@ -7,27 +7,37 @@
     A.append(B) = [1, 2, [3, 4]]
     B.extend(B) = [1, 2, 3, 4]
 """
-
-
+import operator
 def append_first():
     arr = ['a', 'b']
+
     arr = [0] + arr
+
     arr.insert(0, "z")
+
     arr = [-2, *arr]
+
     print("Append first: ", arr)
 
 
 def list_api():
-    arr = [1, 2, 1, 3, 4, 1, 5]
+    arr = [1, 2, 1, 3, 4, 1, 5, 8, 0, 11, 7]
 
-    arr.count(1)            # Return the number of times the specified element appears in the lists
+    arr.count(1)                    # Count 1
 
-    arr.pop()               # ~ arr.pop(-1) Get and remove the last item
-    arr.pop(2)              # Get and remove the item at the give index
+    idx = arr.index(7)              # Return the index of the first of occurrence
+    # operator.indexOf(arr, 7)
 
-    arr.reverse()           # Reverse lists
-    arr = arr[::-1]
-    arr = reversed(arr)
+    del arr[2]                      # Remove the value at index
+    # arr.pop()                     # = pop(-1) get and remove the last item
+    # arr.pop(2)                    # Get and remove the item at the give index
+    # operator.delitem(arr, 0)
+
+    arr.remove(3)                   # Remove first occurrence of value. ValueError if x not in list
+
+    arr.reverse()                   # Reverse list
+    # arr = arr[::-1]
+    # reversed(arr)
 
     print(arr)
 

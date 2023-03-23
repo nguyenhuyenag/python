@@ -24,7 +24,7 @@
 - Find & replace                    Ctrl + R          
 - Find method (show outline)        Ctrl + F12
 - File class name                   Ctrl + N
-- Find string                       Ctrl + Shift + F
+- Search string                     Ctrl + Shift + F
 - Go to line                        Ctrl + G
 - Run current                       Shift + F10
 - Extract variable                  Ctrl + Alt + V

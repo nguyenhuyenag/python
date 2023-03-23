@@ -1,9 +1,8 @@
-colors = ['Black', 'Purple', 'Green']
+import operator
 
-iterator = iter(colors)
+arr = [1, 2, 3, 4, 5, 6]
 
-while iterator:
-    print(next(iterator))  # Output: Black
-    # print(next(iterator))  # Output: Purple
-    # print(next(iterator))  # Output: Green
-    # print(next(iterator))
+# Return the index of the first of occurrence of b in a
+idx = arr.index(7)
+# idx = operator.indexOf(arr, 7)
+print(idx)

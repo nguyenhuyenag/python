@@ -1,5 +1,7 @@
 import ast, heapq
 from itertools import chain
+from operator import countOf
+from collections import Counter
 
 
 def flaten_list():
@@ -23,6 +25,16 @@ def stringlist_to_list():
     print(type(arr))
 
 
+# Count items
+# Xem thêm counter_sample.py
+def count_by_counter():
+    source_list = [1, 0, 3, 4, 3, 8, 3]
+    print("Count:", source_list.count(3))
+    print("CountOf:", countOf(source_list, 3))
+    print("Counter:", Counter(source_list))
+
+
 # heapq_lib()
 # flaten_list()
-stringlist_to_list()
+# stringlist_to_list()
+count_by_counter()
