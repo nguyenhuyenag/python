@@ -30,15 +30,15 @@ def thread1_test():
         pools.shutdown(wait=True)  # wait for all tasks to complete
 
 def thread2_test():
-    with ThreadPoolExecutor(max_workers=2) as pools:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         list_futures = []
         for i in range(1, 6):
             v1 = random.choice([i for i in range(50)])
             v2 = random.choice([i for i in range(50)])
-            list_futures.append(pools.submit(worker, i, v1, v2, True))
+            list_futures.append(executor.submit(worker, i, v1, v2, True))
 
-        # Đóng/mở để thấy kết quả khác
-        pools.shutdown(wait=True)
+        # Đóng/mở dòng này để thấy kết quả khác
+        executor.shutdown(wait=True)
 
         for f in as_completed(list_futures):
             print(f.result())

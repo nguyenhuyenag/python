@@ -21,27 +21,27 @@ wiki_page_urls = [
 ]
 
 
-def wiki_test1():
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = []
-        for url in wiki_page_urls:
-            futures.append(executor.submit(check_wiki_page_exist, wiki_page_url=url))
-        for future in concurrent.futures.as_completed(futures):
-            print(future.result())
+# def wiki_test1():
+#     with concurrent.futures.ThreadPoolExecutor() as executor:
+#         futures = []
+#         for url in wiki_page_urls:
+#             futures.append(executor.submit(check_wiki_page_exist, wiki_page_url=url))
+#         for future in concurrent.futures.as_completed(futures):
+#             print(future.result())
 
 
-def wiki_test2():
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = []
-        for url in wiki_page_urls:
-            futures.append(
-                executor.submit(check_wiki_page_exist, wiki_page_url=url, timeout=0.0005)
-            )
-        for future in concurrent.futures.as_completed(futures):
-            try:
-                print(future.result())
-            except requests.ConnectTimeout:
-                print("ConnectTimeout.")
+# def wiki_test2():
+#     with concurrent.futures.ThreadPoolExecutor() as executor:
+#         futures = []
+#         for url in wiki_page_urls:
+#             futures.append(
+#                 executor.submit(check_wiki_page_exist, wiki_page_url=url, timeout=0.0005)
+#             )
+#         for future in concurrent.futures.as_completed(futures):
+#             try:
+#                 print(future.result())
+#             except requests.ConnectTimeout:
+#                 print("ConnectTimeout.")
 
 
 def run_without_thread():
@@ -67,5 +67,5 @@ def run_with_thread():
 
 
 if __name__ == "__main__":
-    # run_without_thread()
     run_with_thread()
+    # run_without_thread()

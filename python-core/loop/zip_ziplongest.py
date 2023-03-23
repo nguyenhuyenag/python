@@ -1,4 +1,4 @@
-import lib_itertools.sequence_ziplongest as zp
+import itertools_lib.sequence_ziplongest as zp
 
 
 def method_name():
