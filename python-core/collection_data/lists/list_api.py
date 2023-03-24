@@ -11,11 +11,9 @@ import operator
 def append_first():
     arr = ['a', 'b']
 
-    arr = [0] + arr
-
-    arr.insert(0, "z")
-
-    arr = [-2, *arr]
+    arr = [1] + arr
+    arr.insert(0, "2")
+    arr = [3, *arr]
 
     print("Append first: ", arr)
 
@@ -42,5 +40,5 @@ def list_api():
     print(arr)
 
 
-# append_first()
-list_api()
+append_first()
+# list_api()
