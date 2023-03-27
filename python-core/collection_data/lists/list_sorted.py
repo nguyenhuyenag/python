@@ -1,8 +1,9 @@
 """
     Sort by length: lists.sort(key=len) = sorted(lists, key=len)
-"""""
 
-
+    Note: sorted() function creates a copy of the object during sorting which creates additional overhead compared to
+    the sort() function. Hence, the sort() function is faster than the sorted() function
+"""
 def sort_in_place():
     thelist = [1, 2, 0, -1, -3, 4]
     thelist.sort(reverse=True)

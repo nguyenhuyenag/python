@@ -1,8 +1,7 @@
-import operator
+import os
 
-arr = [1, 2, 3, 4, 5, 6]
+# print all environment variables as a dictionary
+print(os.environ)
 
-# Return the index of the first of occurrence of b in a
-idx = arr.index(7)
-# idx = operator.indexOf(arr, 7)
-print(idx)
+# get LANG variable without KeyError
+print(os.environ.get("LANG"))

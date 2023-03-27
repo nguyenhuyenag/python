@@ -1,11 +1,24 @@
 import time
-from datetime import datetime
+from datetime import date, datetime
 
 
 def datetime_api():
-    d = datetime.now()
-    print("Now: ", d.strftime("%Y-%m-%d %H:%M:%S"))
-    print("Year = {}, month = {}, day = {},".format(d.year, d.month, d.day))
+    dt = datetime.now()
+    print("Now: ", dt.strftime("%Y-%m-%d %H:%M:%S"))
+    print("Year = {}, month = {}, day = {},".format(dt.year, dt.month, dt.day))
+
+    # Date object to represent the date
+    dt = date(2022, 2, 24)
+    print("Init date:", dt)
+
+    # Date object of today's date
+    today = date.today()
+    # Get current date
+    print("Current date:", today)
+    # Get day, month, and year of the week
+    print("Current year:", today.year)
+    print("Current month:", today.month)
+    print("Current day:", today.day)
 
 
 def to_millisecond():
@@ -13,5 +26,5 @@ def to_millisecond():
     print("Millisecond = ", milli_sec)
 
 
+# to_millisecond()
 datetime_api()
-to_millisecond()

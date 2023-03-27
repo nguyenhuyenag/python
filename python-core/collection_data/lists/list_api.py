@@ -10,11 +10,9 @@
 import operator
 def append_first():
     arr = ['a', 'b']
-
     arr = [1] + arr
     arr.insert(0, "2")
     arr = [3, *arr]
-
     print("Append first: ", arr)
 
 
