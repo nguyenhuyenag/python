@@ -1,3 +1,3 @@
-# This is main code
-# This is dev1 code
-# This is dev2 code
+# dev1
+arr = [1, 2, 3, 4, 5]
+print(sum(arr))
