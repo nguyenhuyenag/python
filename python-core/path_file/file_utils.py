@@ -1,6 +1,6 @@
 import os
+from importlib.resources import path
 from pathlib import Path
-
 from path_directory.directory import get_parent
 
 
@@ -34,13 +34,22 @@ def rename(path_file):
     new_name = f"{f.stem}_new{f.suffix}"
     f.rename(new_name)
 
+def file_todo(path_file):
+    with open(path_file) as file:
+        for line in file:
+            print(line.rstrip() + ",")
+
 
 if __name__ == '__main__':
-    # file = "data.txt"
+    path_file = r"file\data.txt"
     # data = read_file_to_bytes(path_file)
     # data = read_file_to_string(path_file)
     # data = read_file_into_list(file)
+    file_todo(path_file)
+
+    # myfile = r'C:\Users\huyennv\Desktop\test\test1.txt'
+    # rename(myfile)
+
     # print(data)
 
-    myfile = r'C:\Users\huyennv\Desktop\test\test1.txt'
-    rename(myfile)
+
