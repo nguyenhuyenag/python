@@ -32,8 +32,8 @@ def merge_dict():
 def get_dict_value():
     di = {'age': 22, 'name': 'Green'}
     # print(di['class'])            # -> KeyError: 'class'
-    # print(di.get('class'))        # -> None
-    print(di.get('class', '0'))  # -> 0
+    # print(di.get('class'))        # -> Default is None
+    print(di.get('class', '0'))     # -> Default is 0
 
 
 def dict_api():

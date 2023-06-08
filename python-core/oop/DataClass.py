@@ -26,3 +26,10 @@ print(student)
 # Conversion to a tuple or a dictionary
 print("Tuple:", astuple(student))
 print("Dictionary:", asdict(student))
+
+# Get value
+value = getattr(student, "name", None)
+print("Get by getattr", value)
+
+value = getattr(student, "my_name", None)
+print("Get by getattr:", value)

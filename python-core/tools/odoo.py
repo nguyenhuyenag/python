@@ -12,6 +12,8 @@ def create_json(list_fields, object_name):
             data += row
     print("{\n" + data + "\n}")
 
-fields = ['id', 'name', 'currency_id', 'code', 'create_uid', 'create_date', 'write_date']
-
+pfile = r'table_data.txt'
+fields = read_file_into_list(pfile)
+# fields.sort()
+# print(fields)
 create_json(fields, "template")
