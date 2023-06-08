@@ -53,7 +53,7 @@ def dict_api():
     print(dic)
 
 
-def keys_and_items():
+def keys_and_values():
     dic = {'a': 1, 'b': 2, 'c': 3}
     for k, v in zip(dic.keys(), dic.values()):
         print(k, v)
@@ -67,4 +67,4 @@ create_dict()
 # merge_dict()
 # get_dict_value()
 # dict_api()
-# keys_and_items()
+# keys_and_values()
