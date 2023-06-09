@@ -75,13 +75,13 @@ def fixpath():
     win = str(PureWindowsPath(PurePosixPath(posix)))
     print(win)  # foo\bar\path_file.txt
 
-
-# get_current_path_file()
-# get_current_dir()
-# create_folder()
-# rename_folder()
-# delete_empty_folder()
-# delete_any_folder()
-# join_path()
-fixpath()
-# get_parent()
+if __name__ == '__main__':
+    # get_current_path_file()
+    # get_current_dir()
+    # create_folder()
+    # rename_folder()
+    # delete_empty_folder()
+    # delete_any_folder()
+    # join_path()
+    fixpath()
+    # get_parent()

@@ -1,7 +1,3 @@
-def read_file_into_list(_file):
-    return [line.strip() for line in open(_file, "r")]
-
-
 def create_json(list_fields, object_name):
     data = ""
     for field in list_fields:
@@ -12,6 +8,6 @@ def create_json(list_fields, object_name):
             data += row
     print("{\n" + data + "\n}")
 
-fields = ['id', 'name', 'currency_id', 'code', 'create_uid', 'create_date', 'write_date']
-
-create_json(fields, "template")
+if __name__ == '__main__':
+    fields = ['id', 'name', 'currency_id', 'code', 'create_uid', 'create_date', 'write_date']
+    create_json(fields, "template")

@@ -34,8 +34,8 @@ def rename(path_file):
     new_name = f"{f.stem}_new{f.suffix}"
     f.rename(new_name)
 
-def file_todo(path_file):
-    with open(path_file) as file:
+def file_todo(pfile):
+    with open(pfile) as file:
         for line in file:
             print(line.rstrip() + ",")
 
