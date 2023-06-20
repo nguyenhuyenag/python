@@ -1,0 +1,32 @@
+
+from odoo.http import request, Response
+
+- Get model id
+
+	model.ids = [id]
+
+- Save
+
+	ctx = request.session.context.copy()
+	ctx.update(context)
+	model = request.env['helpdesk.ticket'].with_context(ctx)
+	result = model.create(values)
+
+- List field model
+
+	request.env['table.name']._fields
+
+- Find one & check entity exist
+
+	accmove = request.env['account.move'].browse(domain = [('invoice_origin', '=', name)])
+	entity = request.env['table.name'].browse(int(order_id))
+	
+	if entity.exists():
+		# The sale order exists
+	else:
+		# The sale order does not exist
+
+- Find all
+
+	domain = [('id', 'in', list_email)]
+	lists = request.env['account.move'].search_read(domain, offset=offset, limit=limit, order=order)
