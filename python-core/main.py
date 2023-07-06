@@ -1,2 +1,3 @@
-for i in range(1, 13):
-    print(i)
+lst = []
+if lst:
+    print("Trueeeeeeeeeeeeee")
