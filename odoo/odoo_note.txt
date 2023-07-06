@@ -17,8 +17,9 @@ from odoo.http import request, Response
 	request.env['table.name']._fields
 
 - Find one & check entity exist
-
-	accmove = request.env['account.move'].browse(domain = [('invoice_origin', '=', name)])
+	
+	domain = [('invoice_origin', '=', name), ('invoice_status', '!=', 'invoiced')]
+	accmove = request.env['account.move'].browse(domain)
 	entity = request.env['table.name'].browse(int(order_id))
 	
 	if entity.exists():
