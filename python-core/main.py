@@ -1,3 +1,1 @@
-lst = []
-if lst:
-    print("Trueeeeeeeeeeeeee")
+print(int('06'))
