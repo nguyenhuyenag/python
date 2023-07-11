@@ -1,6 +1,4 @@
 id
-name
-product_brand_id
 message_main_attachment_id
 default_code
 active

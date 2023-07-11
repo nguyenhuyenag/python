@@ -4,11 +4,20 @@ from odoo.http import request, Response
 - Get model id
 
 	model.ids = [id]
+	
+- Domain
 
-- Save
+	domain = [
+		('invoice_origin', '=', name), 
+		('invoice_status', '!=', 'invoiced'), 
+		("appoint_state", "not in", ['rejected'])
+	]
+
+- Save & create
 
 	ctx = request.session.context.copy()
 	ctx.update(context)
+	
 	model = request.env['helpdesk.ticket'].with_context(ctx)
 	result = model.create(values)
 
@@ -18,7 +27,6 @@ from odoo.http import request, Response
 
 - Find one & check entity exist
 	
-	domain = [('invoice_origin', '=', name), ('invoice_status', '!=', 'invoiced')]
 	accmove = request.env['account.move'].browse(domain)
 	entity = request.env['table.name'].browse(int(order_id))
 	
