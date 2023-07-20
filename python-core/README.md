@@ -14,7 +14,7 @@
     File -> Settings -> Editor -> Inspections > Typo (uncheck)
 
 - Cut line                          Ctrl + X
-- Delete line                       Ctrl + X
+- Delete line                       Ctrl + Y
 - Duplicate line                    Ctrl + D 
 - Undo / Redo                       Ctrl + Z / Ctrl + Shift + Z
 - Move line up/down                 Ctrl + Shift + Up/Down 
