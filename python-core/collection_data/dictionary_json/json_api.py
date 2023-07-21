@@ -21,8 +21,10 @@ def format_json():
     # print(json.dumps(x))
     # print(json.dumps(x, indent=4))
     # print(json.dumps(x, indent=4, separators=(". ", " = ")))
+
     # Sort the result alphabetically by keys
-    print(json.dumps(x, indent=4, sort_keys=True))
+    output = json.dumps(x, indent=4, sort_keys=True)
+    print(output)
 
 
 # is merged dictionary
