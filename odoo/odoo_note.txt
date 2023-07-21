@@ -27,13 +27,15 @@ from odoo.http import request, Response
 
 - Find one & check entity exist
 	
-	accmove = request.env['account.move'].browse(domain)
-	entity = request.env['table.name'].browse(int(order_id))
+	entity = model.browse(int(id))
+	if entity:
+		# To do
 	
+	entity = request.env['table.name'].browse(int(order_id))
 	if entity.exists():
-		# The sale order exists
+		# The entity exist
 	else:
-		# The sale order does not exist
+		# The entity doesn't exist
 
 - Find all
 
