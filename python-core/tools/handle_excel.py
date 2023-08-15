@@ -12,7 +12,7 @@ sheet = workbook['Sheet']  # Replace 'Sheet1' with your sheet name
 
 column_change = 5   # Start from 0
 
-# 1 is header
+# Because 1 is header so start=2
 for (index, row) in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
     if row[column_change]:  # Check if the cell is not empty
         # Create new value
