@@ -28,14 +28,16 @@ from odoo.http import request, Response
 - Find one & check entity exist
 	
 	entity = model.browse(int(id))
-	if entity:
-		# To do
 	
 	entity = request.env['table.name'].browse(int(order_id))
 	if entity.exists():
 		# The entity exist
 	else:
 		# The entity doesn't exist
+	
+	
+	if entity:
+		# To do
 
 - Find all
 
