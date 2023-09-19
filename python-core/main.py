@@ -1,7 +1,7 @@
-from datetime import datetime
+A = [1,2,3] # =>    [1,2,3,4] hoặc [1,2,3,""]
 
-date_string = "03/19/2021"
-date_object = datetime.strptime(date_string, "%m/%d/%Y")
-formatted_date = date_object.strftime("%Y-%m-%d")
+B = []
 
-print(formatted_date)
+result = A + ([4] if B else [''])
+
+print(result)
