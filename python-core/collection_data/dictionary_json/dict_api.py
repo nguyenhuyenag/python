@@ -4,6 +4,7 @@ def create_dict():
     print('numbers3 =', numbers3)
 
 
+# Tạo dict từ set và 1 list
 def fromkeys():
     keys = {'a', 'b', 'c'}
     value = [1]
@@ -13,6 +14,7 @@ def fromkeys():
     print(vowels)
 
 
+# Gộp 2 dict
 def merge_dict():
     x = {"age": 22}
     y = {"name": 'Green'}
@@ -29,42 +31,47 @@ def merge_dict():
     # print(z)
 
 
+# Get giá trị
 def get_dict_value():
     di = {'age': 22, 'name': 'Green'}
     # print(di['class'])            # -> KeyError: 'class'
     # print(di.get('class'))        # -> Default is None
-    print(di.get('class', '0'))     # -> Default is 0
+    print(di.get('class', '0'))  # -> Default is 0
+
+
+# Duyệt dict
+def keys_and_values():
+    dic = {'a': 1, 'b': 2, 'c': 3}
+
+    for k, v in dic.items():
+        print(k, v)
+
+    print("Or")
+
+    for k, v in zip(dic.keys(), dic.values()):
+        print(k, v)
 
 
 def dict_api():
     dic = {'age': 17, 'name': 'Green', "country": "US", "job": "Student"}
 
-    dic.pop("age")  # Remove the item with the specified key
-    dic.popitem()  # Remove the last item
+    dic.pop("age")          # Remove the item with the specified key
+    dic.popitem()           # Remove the last item
 
-    dic["name"] = "Red"  # Change value
-    dic.setdefault("name", "Red")  # None is default
+    dic["name"] = "Red"             # Change value
+    dic.setdefault("name", "Red")   # None is default
 
-    dic.keys()  # Return the lists of keys as a view object
-    dic.items()  # Return lists of (key, value). If lists is updated, items will change (view object)
+    dic.keys()      # Return the lists of keys as a view object
+    dic.items()     # Return lists of (key, value). If lists is updated, items will change (view object)
 
     # dic.copy()                    # Shallow copy
     # dict.clear()                  # Delete dict
     print(dic)
 
 
-def keys_and_values():
-    dic = {'a': 1, 'b': 2, 'c': 3}
-    for k, v in zip(dic.keys(), dic.values()):
-        print(k, v)
-    # Or
-    for k, v in dic.items():
-        print(k, v)
-
-
-create_dict()
+# create_dict()
 # fromkeys()
 # merge_dict()
 # get_dict_value()
 # dict_api()
-# keys_and_values()
+keys_and_values()
