@@ -19,6 +19,7 @@
 - Undo / Redo                       Ctrl + Z / Ctrl + Shift + Z
 - Move line up/down                 Ctrl + Shift + Up/Down 
 - Format code                       Ctrl + Alt + Shift + L
+                                    Code > Reformat ...
 - Close current file                Ctrl + F4
 - Extract method                    Ctrl + Alt + M
 - Find & replace                    Ctrl + R          
