@@ -12,6 +12,12 @@ from odoo.http import request, Response
 		('invoice_status', '!=', 'invoiced'), 
 		("appoint_state", "not in", ['rejected'])
 	]
+	
+	Domain OR, AND
+	
+		field1 = 5 OR (field2 = 10 AND field3 = 12)
+		
+		['|', (field1, '=', 5), ('&', (field2, '=', 10), (field3, '=', 12))]
 
 - Save & create
 
