@@ -22,7 +22,8 @@ for (i, row) in enumerate(all_rows, start=2):
         print(i, row)
 
 # Create the INSERT INTO sql query
-# query = "INSERT INTO orders (product, customer_type, rep, date, actual, expected, open_opportunities, closed_opportunities, city, state, zip, population, region) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+query = "INSERT INTO orders (ID, hovaten, sobhxh, ngaysinh, tuthang, denthang, tylebosung, trathe, ghichu, ngaytao_ps, nguoitao_ps, nguoi_import, ngay_impore,
+) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
 # Create a For loop to iterate through each row in the XLS file, starting at row 2 to skip the headers
 # for r in range(1, sheet.nrows):
