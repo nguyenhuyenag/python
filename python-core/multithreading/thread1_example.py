@@ -8,12 +8,15 @@ def worker(thread_name, a, b, flag: bool):
     if flag:
         print(f"Thread {thread_name}: Start")
     cal = a ** b
+
     if flag:
         print(f"Thread {thread_name}: Calculator {a}^{b}={cal}")
     time_sleep = random.choice([1, 2, 3, 4])
+
     if flag:
         print(f"Thread {thread_name}: Sleep {time_sleep} second...")
     time.sleep(time_sleep)
+
     if flag:
         print(f"Thread {thread_name}: ----------------------> Done")
     return cal
