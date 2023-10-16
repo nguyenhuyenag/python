@@ -14,7 +14,7 @@ def shuffle_string():
     li = list("abcdefgh")
     shuffle(li)
     result = ''.join(li)
-    print("Shuffle string_character: {} -> {}".format(s, result))
+    print("Shuffle character_string: {} -> {}".format(s, result))
 
 
 def random_using_index():

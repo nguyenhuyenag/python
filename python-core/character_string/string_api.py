@@ -1,10 +1,10 @@
-# Converts the first character of a string_character to an uppercase letter and all other alphabets to lowercase
+# Converts the first character of a character_string to an uppercase letter and all other alphabets to lowercase
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
     print(s.capitalize())
 
 
-# Return the number of times the value S appears in the string_character
+# Return the number of times the value S appears in the character_string
 def count():
     s = "I Love apples, apple are MY Favorite fruit"
     print("Count 'apple' -> ", s.count("apple"))
@@ -37,7 +37,7 @@ def join_string_array():
     print("{} -> {}".format(di, "*".join(di)))
 
 
-# Trim a string_character
+# Trim a character_string
 def trim_a_string():
     txt = "           just                 "
     print("Python is", txt.strip(), "not funny")

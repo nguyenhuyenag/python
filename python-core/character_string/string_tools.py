@@ -1,4 +1,4 @@
-# Repeat a string_character without loop
+# Repeat a character_string without loop
 def repeat_string():
     s = "abc"
     print(4 * s)
