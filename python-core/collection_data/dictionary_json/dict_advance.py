@@ -1,7 +1,10 @@
 # {'a': 1, 'b': 2}  ->  {'1': 'a', '2': 'b'}
 def swap_key_and_value():
-    dic = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-    print({v: k for k, v in dic.items()})
+    my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+    new_dict = {v: k for k, v in my_dict.items()}
+    my_inverted_dict = dict(map(reversed, my_dict.items()))
+    print(new_dict)
+    print(my_inverted_dict)
 
 # Sort a dictionary by values¶
 def sort_dict():
@@ -10,5 +13,6 @@ def sort_dict():
     print(sorted_data)
 
 
-# swap_key_and_value()
-sort_dict()
+# sort_dict()
+swap_key_and_value()
+
