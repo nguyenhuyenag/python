@@ -1,9 +1,8 @@
-import time
+import os
+import pathlib
 
-text = "Hello, this is ChatGPT. How can I assist you today?"
+desktop = pathlib.Path.home() / 'Desktop'
 
-for char in text:
-    print(char, end='', flush=True)
-    time.sleep(0.05)  # Tạo một độ trễ nhỏ giữa các ký tự để giống ChatGPT
+# desktop = os.path.join(os.environ["HOMEPATH"], "Desktop")
 
-print()  # In một dòng mới sau khi hoàn thành
+print(desktop)
