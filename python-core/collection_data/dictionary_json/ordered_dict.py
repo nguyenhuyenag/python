@@ -1,13 +1,13 @@
 from collections import OrderedDict
 
 # Dictionary theo thứ tự chèn
-_ordered = OrderedDict()
-_ordered['z'] = 1
-_ordered['r'] = 3
-_ordered['f'] = 0
-_ordered['a'] = 5
-_ordered['m'] = 9
+ordered = OrderedDict()
+ordered['z'] = 1
+ordered['r'] = 3
+ordered['f'] = 0
+ordered['a'] = 5
+ordered['m'] = 9
 
-print(_ordered)
-_ordered.pop('a')
-print(_ordered)
+print(ordered)
+ordered.pop('a')
+print(ordered)
