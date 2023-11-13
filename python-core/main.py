@@ -1,8 +1,7 @@
-import os
-import pathlib
+data_uri = 'data:image/png;base64,Accccassss...'
 
-desktop = pathlib.Path.home() / 'Desktop'
-
-# desktop = os.path.join(os.environ["HOMEPATH"], "Desktop")
-
-print(desktop)
+if data_uri.startswith('data:'):
+    _, base64_content = data_uri.split(',', 1)
+    print("Base64 Content:", base64_content)
+else:
+    print("Invalid data URI")
