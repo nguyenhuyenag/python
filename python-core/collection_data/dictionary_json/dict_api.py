@@ -27,16 +27,16 @@ def merge_dict():
     z = dict(x, **y)
     print("Merge by dict(): ", y)
 
-    # z = x | z         # ->    python 3.9+
+    # z = x | z         #   python 3.9+
     # print(z)
 
 
 # Get giá trị
 def get_dict_value():
     di = {'age': 22, 'name': 'Green'}
-    # print(di['class'])            # -> KeyError: 'class'
-    # print(di.get('class'))        # -> Default is None
-    print(di.get('class', '0'))  # -> Default is 0
+    # print(di['class'])            #   KeyError: 'class'
+    # print(di.get('class'))        #   Default is None
+    print(di.get('class', '0'))     #   Default is 0
 
 
 # Duyệt dict
@@ -55,14 +55,14 @@ def keys_and_values():
 def dict_api():
     dic = {'age': 17, 'name': 'Green', "country": "US", "job": "Student"}
 
-    dic.pop("age")          # Remove the item with the specified key
-    dic.popitem()           # Remove the last item
+    dic.pop("age")                  # Remove the item with the specified key
+    dic.popitem()                   # Remove the last item
 
     dic["name"] = "Red"             # Change value
     dic.setdefault("name", "Red")   # None is default
 
-    dic.keys()      # Return the lists of keys as a view object
-    dic.items()     # Return lists of (key, value). If lists is updated, items will change (view object)
+    dic.keys()          # Return the lists of keys as a view object
+    dic.items()         # Return lists of (key, value). If lists is updated, items will change (view object)
 
     # dic.copy()                    # Shallow copy
     # dict.clear()                  # Delete dict
