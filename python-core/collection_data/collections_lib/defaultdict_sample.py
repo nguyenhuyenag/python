@@ -9,14 +9,16 @@ def normal():
             counts[key] = 1
         else:
             counts[key] += 1
+
     print(counts)
 
 
 def using_defaultdict():
     arr = 'abdacvcdcscbcbgnmnnb'
-    counts = defaultdict(lambda : 0)
+    counts = defaultdict(lambda: 0)
     for key in arr:
         counts[key] += 1
+        
     print(counts.items())
 
 
