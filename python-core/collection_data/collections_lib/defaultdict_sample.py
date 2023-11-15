@@ -18,7 +18,7 @@ def using_defaultdict():
     counts = defaultdict(lambda: 0)
     for key in arr:
         counts[key] += 1
-        
+
     print(counts.items())
 
 
