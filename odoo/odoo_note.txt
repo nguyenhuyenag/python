@@ -33,9 +33,7 @@ from odoo.http import request, Response
 
 - Find one & check entity exist
 	
-	entity = model.browse(int(id))
-	
-	entity = request.env['table.name'].browse(int(order_id))
+	entity = request.env['table.name'].browse(int(order_id)) # Bắt buộc kiểu int()
 	if entity.exists():
 		# The entity exist
 	else:
