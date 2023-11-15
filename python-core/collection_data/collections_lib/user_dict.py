@@ -1,7 +1,7 @@
 from collections import UserDict
 
 
-class mydata(UserDict):
+class MyData(UserDict):
 
     def pop(self, s=None):
         raise RuntimeError("Deletion not allowed")
@@ -10,7 +10,7 @@ class mydata(UserDict):
         raise RuntimeError("Append not allowed")
 
 
-mydict = mydata({'x': 10, 'y': 20})
+mydict = MyData({'x': 10, 'y': 20})
 
 # print(mydict)
 
