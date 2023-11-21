@@ -1,7 +1,7 @@
 import requests
 from requests.exceptions import HTTPError
 
-
+# res = requests.post(url, data=json.dumps(data), headers=headers)
 def show_req_info():
     payload = {'key1': 'value1', 'key2': 'value2'}
     res = requests.get('https://httpbin.org/get', params=payload)
@@ -12,10 +12,10 @@ def show_req_info():
     # print("Encoding", res.encoding)
     # print("Response Content:", res.text)
     # print("Binary Response Content:", res.content)      # = bytyes(res.text)
-    # print("JSON Response Content:", res.json())         # = json(res.text)
+    print("JSON Response Content:", res.json())         # = json(res.text)
     # print("Raw Response Content:", res.raw)
     # print("url:", res.url)
-    print(res.iter_lines())
+    # print(res.iter_lines())
 
 
 def response_with_try_catch():
@@ -42,6 +42,6 @@ def redirect():
     # print(r.status_code)
 
 
-# show_req_info()
+show_req_info()
 # response_with_try_catch()
-redirect()
+# redirect()
