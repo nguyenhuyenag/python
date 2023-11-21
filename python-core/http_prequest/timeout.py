@@ -3,7 +3,7 @@ import traceback
 from requests.exceptions import ConnectTimeout
 
 
-# timeout=None ->   Wait forever
+# timeout=None      ->   Wait forever
 # timeout=(connect_timeout, read_timeout)
 def timeout():
     try:

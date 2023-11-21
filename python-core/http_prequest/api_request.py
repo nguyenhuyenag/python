@@ -11,7 +11,7 @@ def show_req_info():
     # print("Header:", res.headers)
     # print("Encoding", res.encoding)
     # print("Response Content:", res.text)
-    # print("Binary Response Content:", res.content)      # = bytyes(res.text)
+    # print("Binary Response Content:", res.content)    # = bytyes(res.text)
     print("JSON Response Content:", res.json())         # = json(res.text)
     # print("Raw Response Content:", res.raw)
     # print("url:", res.url)
