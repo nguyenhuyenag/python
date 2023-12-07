@@ -31,14 +31,13 @@ def find_duplicate_files(folder_path):
 
 
 # Specify the folder path
-folder_path = r'D:\WORK\Cloud\OneDrive\Media\GIF'
+folder_path = r'D:\GoogleDrive\forshare\maple\api'
 
 # Find duplicate files
 duplicates = find_duplicate_files(folder_path)
 
 # Print the duplicate files
 if duplicates:
-    print("Duplicate files found:")
     for hash_value, file_paths in duplicates.items():
         print(f"Hash: {hash_value}")
         for file_path in file_paths:
