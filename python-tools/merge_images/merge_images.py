@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def merge_images(image_path1, image_path2, output_path, target_width, target_height):
     # Open the images
     image1 = Image.open(image_path1)
@@ -19,6 +20,7 @@ def merge_images(image_path1, image_path2, output_path, target_width, target_hei
     # Save the merged image
     merged_image.save(output_path)
 
+
 # Example usage:
 # image_path1 = "image1.png"
 # image_path2 = "image2.jpg"
@@ -29,7 +31,7 @@ def merge_images(image_path1, image_path2, output_path, target_width, target_hei
 target_width = 1000  # Specify the desired width
 target_height = 700  # Specify the desired height
 
-merge_images("image1.png", "image2.jpg", "merged_image_1.jpg", target_width, target_height)
-merge_images("image3.jpg", "image4.png", "merged_image_2.jpg", target_width, target_height)
+merge_images("image1.png", "image2.jpg", "merge_out1.jpg", target_width, target_height)
+merge_images("image3.jpg", "image4.png", "merge_out2.jpg", target_width, target_height)
 
 print("OK")
