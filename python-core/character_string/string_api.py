@@ -1,7 +1,8 @@
 # Converts the first character of a character_string to an uppercase letter and all other alphabets to lowercase
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
-    print(s.capitalize())
+    print("capitalize: " + s.capitalize())
+    print("title: " + s.title())
 
 
 # Return the number of times the value S appears in the character_string
@@ -59,11 +60,11 @@ def swapcase():
 
 
 # count()
-# capitalize()
+capitalize()
 # find_and_index()
 # check_number_alpha()
 # join_string_array()
 # trim_a_string()
 # partition()
 # zerofill()
-swapcase()
+# swapcase()
