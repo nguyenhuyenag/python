@@ -2,17 +2,14 @@
     Built-in Functions
 """
 
-boolean_list = [True, False, True]
-
 """
     any() -> True nếu có một phần tử = True
-"""
-print("any: ", any(boolean_list))
-
-"""
     all() -> True nếu tất cả các phần tử = True
 """
-print("all: ", all(boolean_list))
+boolean_list = [True, False, True]
+print("any: [True, False, True] -> {}".format(any(boolean_list)))
+print("all: [True, False, True] -> {}".format(all(boolean_list)))
+print()
 
 """
     ascii() & repr(): Trả về một chuỗi được biểu diễn bởi các ký tự ASCII,
@@ -22,3 +19,14 @@ print("all: ", all(boolean_list))
 arr = [1, 2, 'a', 'ả']
 print("repr: ", repr(arr))
 print("ascii: ", ascii(arr))
+print()
+
+"""
+    bin(): Chuyển đổi int <-> binary
+    int('111', 2)
+"""
+num = 15
+bi = bin(num)
+print("bin: bin({}) = '{}'".format(num, bin(num)))
+print("int: int('{}', 2) = {}".format(bin(num), num))
+print()
