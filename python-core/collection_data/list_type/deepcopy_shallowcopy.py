@@ -15,7 +15,7 @@ def method():
     b = a[:]
     # or:
     # b = a.copy()
-    # b = lists(a)
+    # b = list_type(a)
     # b = cp.copy(a)
 
     b.append(4)

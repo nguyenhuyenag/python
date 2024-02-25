@@ -1,5 +1,5 @@
 """
-    Sort by length: lists.sort(key=len) = sorted(lists, key=len)
+    Sort by length: list_type.sort(key=len) = sorted(list_type, key=len)
 
     Note: sorted() function creates a copy of the object during sorting which creates additional overhead compared to
     the sort() function. Hence, the sort() function is faster than the sorted() function
