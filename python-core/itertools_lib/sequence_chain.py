@@ -6,7 +6,7 @@ l2 = [1, 3, 5]
 L = list(chain(l1, l2))
 print("L:", L)
 
-# Because character_string is considered to be an iterable
+# Because strings is considered to be an iterable
 l4 = list(chain("ABC", "DEF", "GHK"))
 print("l4:", l4)
 
