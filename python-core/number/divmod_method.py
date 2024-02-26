@@ -13,4 +13,3 @@ print("divmod = ", result)  # Output: (2, 1)
 quotient, remainder = divmod(17, 5)
 print("Quotient:", quotient)
 print("Remainder:", remainder)
-

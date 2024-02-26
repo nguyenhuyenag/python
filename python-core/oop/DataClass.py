@@ -31,5 +31,6 @@ print("Dictionary:", asdict(student))
 value = getattr(student, "name", None)
 print("Get by getattr", value)
 
+# getattr() với giá trị mặc định cho thuộc tính không tồn tại
 value = getattr(student, "my_name", None)
 print("Get by getattr:", value)

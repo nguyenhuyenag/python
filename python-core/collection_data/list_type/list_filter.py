@@ -1,3 +1,6 @@
+"""
+    filter(): Lọc các phần tử của một dãy (list, tuple, hoặc iterable khác) dựa trên một hàm điều kiện
+"""
 def filter_by_loop():
     scores = [200, 105, 18, 80, 150, 140]
     print([s for s in scores if s >= 150])
@@ -25,8 +28,6 @@ def filter_by_lambda():
     When None is used as the first argument to the filter() function, all elements that are truthy
     values (gives True if converted to boolean) are extracted
 """
-
-
 def filter_by_none():
     random_list = [1, 'a', 0, False, True, '0']
     filtered_iterator = filter(None, random_list)
