@@ -1,4 +1,4 @@
-# Converts the first character of a strings to an uppercase letter and all other alphabets to lowercase
+# Converts the first character of a strings to an uppercase letter and all zother alphabets to lowercase
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
     print("capitalize: " + s.capitalize())
