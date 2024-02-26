@@ -2,7 +2,6 @@
     Một số cách gán giá trị cho biến
 """
 
-
 # Assign multiple variables
 def assign1():
     x, y, z = 1, 2, "3"
@@ -25,4 +24,3 @@ def assign3():
 # assign1()
 # assign2()
 assign3()
-
