@@ -1,1 +1,2 @@
-print(isinstance("1", int))
+# print(isinstance([], Iterable))
+print(type([]))
