@@ -22,8 +22,7 @@ try:
     # Vì 0 is Header (A, B, C,...) nên start = 1
     for row, column in enumerate(sheet_name.iter_rows(min_row=0, values_only=True), start=1):
         column_value = column[b_index]
-        print(column_value)
-
+        # print(column_value)
         # Check if the column_value is not None before using eval
         if column_value is not None:
             try:
