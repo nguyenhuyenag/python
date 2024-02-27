@@ -2,19 +2,20 @@
     Number methods
 """
 
-# """
-#     eval(): Tính giá trị một biểu thức kiểu string
-# """
-# def eval_method():
-#     s3 = "3 * (1 + 6/2)"
-#     s1 = "5 == 5"
-#     s2 = "10 ** 2"
-#     s4 = "'Hello' * 5"
-#     print("eval: '{}' => {}".format(s1, eval(s1)))
-#     print("eval: '{}' => {}".format(s2, eval(s2)))
-#     print("eval: '{}' => {}".format(s3, eval(s3)))
-#     print("eval: '{}' => {}".format(s4, eval(s4)))
-#
-#
-# if __name__ == '__main__':
-#     eval_method()
+"""
+    min, max: Tìm min, max của một tập hợp
+"""
+
+
+def min_max():
+    print("min(3,5): ", min(3, 5))
+    numbers = [3, 1, 4, 1, 5]
+    print(f"min({numbers}): ", min(numbers))  # Kết quả là 1
+
+    strings = ["apple", "banana", "kiwi", "orange", "Orange", "pear"]
+    # So sánh theo nhiều tiêu chí: key=lambda x: (len(x), x)
+    max_by_length = max(strings, key=lambda x: (len(x), x))
+    print("max by length: ", max_by_length)
+
+if __name__ == '__main__':
+    min_max()
