@@ -58,8 +58,16 @@ def eval_method():
 """
     globals(): Trả về 1 dictionary chứ các biến global
 """
-def globals_method():
+def _globals():
     print(globals())
+
+"""
+    locals(): Trả về dictionary chưa các biến local
+"""
+def _locals():
+    x = 1
+    y = 2
+    print(locals())
 
 """
     callable(): Kiểm tra 1 đối tượng có thể gọi được không
@@ -140,11 +148,12 @@ if __name__ == '__main__':
     # bin_int2()
     # dir_method()
     # eval_method()
-    # globals_method()
+    _locals()
+    # _globals()
     # callable_method()
     # hasattr_method()
     # hash_method()
     # help_method()
     # _input()
     # _int()
-    _isinstance()
+    # _isinstance()
