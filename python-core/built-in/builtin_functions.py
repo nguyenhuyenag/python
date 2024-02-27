@@ -116,6 +116,9 @@ def help_method():
     input(): Lấy dữ liệu nhập vào từ bàn phím
 """
 def _input():
+    # Read multiple value
+    # a, b, c = input().split(",")
+    # print(a, b, c)
     user_input = input("Nhập vào một giá trị: ")
     print("Bạn đã nhập:", user_input)
 

@@ -75,6 +75,7 @@ def fixpath():
     win = str(PureWindowsPath(PurePosixPath(posix)))
     print(win)  # foo\bar\path_file.txt
 
+
 if __name__ == '__main__':
     # get_current_path_file()
     # get_current_dir()
