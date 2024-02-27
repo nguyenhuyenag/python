@@ -15,7 +15,7 @@ def assign2():
     print(x, y, z)
 
 
-# Get all items in the middle of the list_type
+# Get all items in the middle of the list_
 def assign3():
     _, *elements_in_the_middle, _ = [1, 2, 3, 4, 5]
     print(elements_in_the_middle)  # [2, 3, 4]

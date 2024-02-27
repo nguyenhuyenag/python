@@ -1,3 +1,5 @@
+import operator
+
 """
     5 * [0] = [0, 0, 0, 0, 0]
 
@@ -7,7 +9,6 @@
     A.append(B) = [1, 2, [3, 4]]
     B.extend(B) = [1, 2, 3, 4]
 """
-import operator
 def append_first():
     arr = ['a', 'b']
     arr = [1] + arr
@@ -31,12 +32,30 @@ def list_api():
 
     arr.remove(3)                   # Remove first occurrence of value. ValueError if x not in list
 
-    arr.reverse()                   # Reverse list
+    print(arr)
+
+def reverse_list():
+    arr = [1, 2, 3, 4, 5]
+
+    """
+        Reverse it self
+    """
+    arr.reverse()
+
+    """
+        Reverse & create a new list
+    """
     # arr = arr[::-1]
-    # reversed(arr)
+
+    """
+        reversed() -> Trả về một đối tượng reversed iterator
+    """
+    # arr = list(reversed(arr))
 
     print(arr)
 
 
-append_first()
-# list_api()
+if __name__ == '__main__':
+    # list_api()
+    # append_first()
+    reverse_list()

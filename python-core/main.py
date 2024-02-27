@@ -1,4 +1,5 @@
-import string
+arr = [1,1,2,3,4]
 
-for char in string.ascii_lowercase:
-    print(char)
+_set = set(arr)
+
+print(_set)

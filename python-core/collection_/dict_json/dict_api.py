@@ -61,8 +61,8 @@ def dict_api():
     dic["name"] = "Red"             # Change value
     dic.setdefault("name", "Red")   # None is default
 
-    dic.keys()          # Return the list_type of keys as a view object
-    dic.items()         # Return list_type of (key, value). If list_type is updated, items will change (view object)
+    dic.keys()          # Return the list_ of keys as a view object
+    dic.items()         # Return list_ of (key, value). If list_ is updated, items will change (view object)
 
     # dic.copy()                    # Shallow copy
     # dict.clear()                  # Delete dict

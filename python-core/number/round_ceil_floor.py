@@ -10,4 +10,5 @@ print("floor:", floor(x))
 
 # Làm tròn số
 print("round:", round(x, 3))
+
 print("format:", format(x, "0.3f"))
