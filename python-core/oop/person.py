@@ -22,6 +22,9 @@ class Person:
         self.name = name
         self.year = year
 
+    def show(self):
+        print(locals())
+
     # ~ toString() method
     def __str__(self):
         return f"[name={self.name}, year={self.year}]"

@@ -56,5 +56,6 @@ class ByteSize(int):
     def __rmul__(self, other):
         return self.__class__(super().__rmul__(other))
 
+
 size = get_folder_size(r"C:\Server\python")
 print(size)
