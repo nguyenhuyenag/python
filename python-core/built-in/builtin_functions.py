@@ -24,17 +24,6 @@ def ascii_repr():
 
 
 """
-    bin(): Chuyển đổi int <-> binary
-    int('111', 2)
-"""
-def bin_int2():
-    num = 15
-    bi = bin(num)
-    print("bin: bin({}) = '{}'".format(num, bin(num)))
-    print("int: int('{}', 2) = {}".format(bin(num), num))
-
-
-"""
     dir(): Lấy danh sách tất cả các tên biến, hàm, lớp,... của một đối tượng
 """
 def dir_method():

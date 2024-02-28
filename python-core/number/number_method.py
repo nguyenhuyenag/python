@@ -17,5 +17,6 @@ def min_max():
     max_by_length = max(strings, key=lambda x: (len(x), x))
     print("max by length: ", max_by_length)
 
+
 if __name__ == '__main__':
     min_max()

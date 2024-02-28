@@ -12,11 +12,9 @@ Class method và Static method
     tiện ích, nhận vào một số tham số và làm việc trên các tham số đó. Mặt khác, class method phải có được một class
     làm tham số truyền vào cho nó.
 
-    – Chúng ta sử dụng cái decorator @classmethod trong Python để tạo ra một class method (phương thức/hàm thuộc về lớp)
+    – Chúng ta sử dụng các decorator @classmethod trong Python để tạo ra một class method (phương thức/hàm thuộc về lớp)
     và sử dụng decorator @staticmethod để tạo ra một static method (phương thức/hàm tĩnh) trong Python.
 """
-
-
 class Person:
     # The __init__() function is called automatically every time the class is being used to create a new object
     # Có thể đổi tên `self` thành tên bất kỳ nhưng phải là tham số đầu tiên của hàm

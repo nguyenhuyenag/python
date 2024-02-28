@@ -22,8 +22,22 @@ Index position:    0   1   2   3   4   5
     slice(stop)
     slice(start, stop, step)
 
+    Trong đó:
+
+        start: Chỉ mục (index) bắt đầu của phần được cắt (không bắt buộc).
+        stop: Chỉ mục kết thúc của phần được cắt.
+        step: Bước (step) giữa các chỉ mục của phần được cắt (không bắt buộc).
+
     A[start:stop:step] = A[slice(start, stop, step)]
 """
 A = ["a", "b", "c", "d", "e", "f", "g", "h"]
 print(len(A))
 print(A[2:8:-1])
+
+
+my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Tạo một đối tượng slice
+my_slice = slice(2, 8, 2)
+# Sử dụng đối tượng slice để lấy một phần của list
+result = my_list[my_slice]
+print(result)  # Output: [2, 4, 6]
