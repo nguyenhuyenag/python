@@ -3,14 +3,16 @@ from importlib.resources import path
 from pathlib import Path
 from path_directory.directory import get_parent
 
-
-def write_bytes_to_file(filepath, filebytes):
-    parent = get_parent(filepath)
+"""
+    Ghi nội dung dạng byte array vào file
+"""
+def write_bytes_to_file(path_file, byte_array):
+    parent = get_parent(path_file)
     if not os.path.exists(parent):
         os.mkdir(parent)
-    with open(filepath, 'wb') as f:
-        f.write(filebytes)
-    return filepath
+    with open(path_file, 'wb') as f:
+        f.write(byte_array)
+    return path_file
 
 
 def read_file_to_string(path_file: str) -> str:
@@ -34,6 +36,7 @@ def rename(path_file):
     new_name = f"{f.stem}_new{f.suffix}"
     f.rename(new_name)
 
+
 def file_todo(pfile):
     with open(pfile) as file:
         for line in file:
@@ -41,15 +44,13 @@ def file_todo(pfile):
 
 
 if __name__ == '__main__':
-    path_file = r"file\data.txt"
+    _path_file = r"file\data.txt"
     # data = read_file_to_bytes(path_file)
     # data = read_file_to_string(path_file)
     # data = read_file_into_list(file)
-    file_todo(path_file)
+    file_todo(_path_file)
 
     # myfile = r'C:\Users\huyennv\Desktop\test\test1.txt'
     # rename(myfile)
 
     # print(data)
-
-

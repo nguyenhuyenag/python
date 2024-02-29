@@ -16,8 +16,8 @@ base64_img = 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAA' \
             'Br5eXCsT/w/EAAAAASUVORK5CYII='
 
 # base64_img_bytes = base64_img.encode('utf-8')
-# with open('decoded_image.png', 'wb') as file_to_save:
+# with open('logo.png', 'wb') as file_to_save:
 #     decoded_image_data = base64.decodebytes(base64_img_bytes)
 #     file_to_save.write(decoded_image_data)
 
-print(read_file_to_bytes('decoded_image.png'))
+print(read_file_to_bytes('output/logo.png'))

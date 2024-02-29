@@ -4,8 +4,8 @@ import os, ntpath, posixpath, shutil
 from pathlib import Path, PurePosixPath, PureWindowsPath
 
 
-def get_parent(your_path):
-    from_path = Path(your_path)
+def get_parent(path_file):
+    from_path = Path(path_file)
     return from_path.parent.absolute()
 
 
@@ -61,9 +61,11 @@ def join_path():
 
 
 """
-    - posixpath for UNIX-style paths
-    - ntpath    for Windows paths
+    - posixpath: For UNIX-style paths
+    - ntpath   : For Windows paths
 """
+
+
 def fixpath():
     # Windows -> Posix
     win = r'foo\bar\file.txt'
@@ -84,5 +86,6 @@ if __name__ == '__main__':
     # delete_empty_folder()
     # delete_any_folder()
     # join_path()
-    fixpath()
+    # fixpath()
     # get_parent()
+    pass
