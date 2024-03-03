@@ -78,13 +78,16 @@ def swapcase():
     s = "aBC"
     print(s.swapcase())
 
+
 """
-    casefold(): viết thường chuỗi và loại bỏ dấu
+    casefold(): Viết thường chuỗi và loại bỏ dấu 
 """
-def casefold():
-    text = "Hèllô"
-    folded_text = text.casefold()
-    print(folded_text)
+def lower_casefold():
+    s = "ß" # Tiếng đức
+    # Chuyển đổi sang lowercase cơ bản
+    print("lower: ", s.lower())
+    # Áp dụng các quy tắc chuẩn hóa Unicode để loại bỏ các biến thể dấu và ký tự
+    print("casefold: ", s.casefold())
 
 
 if __name__ == '__main__':
@@ -98,4 +101,4 @@ if __name__ == '__main__':
     # partition()
     # zerofill()
     # swapcase()
-    casefold()
+    lower_casefold()
