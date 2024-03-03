@@ -13,7 +13,7 @@ def open_excel_with_office(file_path):
 
 # Load the Excel workbook
 workbook = openpyxl.load_workbook(file_path)
-sheet_name = workbook['Th2']  # Replace 'Sheet1' with your sheet name
+sheet_name = workbook['Th3']  # Replace 'Sheet1' with your sheet name
 
 b_index = 1  # 0 -> A, 1 -> B,...
 c_index = 2

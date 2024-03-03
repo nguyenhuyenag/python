@@ -1,6 +1,8 @@
-x = 10
-y = 2
+text = "pYtHon"
 
-result = x / y
+# convert all characters to lowercase
+lowercased_string = text.casefold()
 
-print(result)
+print(lowercased_string)
+
+# Output: python

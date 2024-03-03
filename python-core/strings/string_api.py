@@ -1,8 +1,17 @@
-# Converts the first character of a strings to an uppercase letter and all zother alphabets to lowercase
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
+    # Viết hoa chữ cái đầu câu, còn lại viết thường
     print("capitalize: " + s.capitalize())
+    # Viết hoa chữ cái đầu câi và mỗi chữ cái đầu tiên sau đấu cách
     print("title: " + s.title())
+
+
+"""
+    center(n, fillchar): Canh giữa chuỗi s và thêm những ký tự 2 bên để độ dài = n
+"""
+def center():
+    s = "Hello"
+    print(s.center(20, '*'))
 
 
 # Return the number of times the value S appears in the strings
@@ -11,11 +20,22 @@ def count():
     print("Count 'apple' -> ", s.count("apple"))
 
 
-# find() ~ index(), the only difference is that the 'index()' method raises an exception if not found
-def find_and_index():
-    s = "Mi casa, su casa";
-    print("Index:", s.index("casa"))
-    print("Find:", s.find("casa"))
+"""
+    string.index(value, start, end)
+    find() ~ index(), the only difference is that the 'index()' -> raises an exception if not found
+"""
+def find_index():
+    s = "Mi casa, su casa"
+
+    # find()
+    print("Find():", s.find("casa"))
+
+    # index()
+    print("Index():", s.index("casa"))
+    print("Last index of():", s.rindex("casa"))
+    print("Index from:", s.index("casa", 4))
+
+    # print("Index:", s.)
 
 
 def check_number_alpha():
@@ -58,13 +78,24 @@ def swapcase():
     s = "aBC"
     print(s.swapcase())
 
+"""
+    casefold(): viết thường chuỗi và loại bỏ dấu
+"""
+def casefold():
+    text = "Hèllô"
+    folded_text = text.casefold()
+    print(folded_text)
 
-# count()
-capitalize()
-# find_and_index()
-# check_number_alpha()
-# join_string_array()
-# trim_a_string()
-# partition()
-# zerofill()
-# swapcase()
+
+if __name__ == '__main__':
+    # count()
+    # center()
+    # capitalize()
+    # find_index()
+    # check_number_alpha()
+    # join_string_array()
+    # trim_a_string()
+    # partition()
+    # zerofill()
+    # swapcase()
+    casefold()
