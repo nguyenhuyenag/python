@@ -1,11 +1,19 @@
+""""
+    String methods
 """
-    isdigit()
-    uppper, isuppper()
-    lower(), islower()
-    split()
-    replace()
+
 """
-"".title()
+    - lower(), uppper(), swapcase()
+    - islower(), isuppper()
+    - split()
+    - replace()
+    - endswith()
+    - encode(): String to bytes
+    - isspace(): Kiểm tra chuỗi có phải là khoảng trắng (có thể 1 hoặc nhiều)
+    - isprintable(): Kiểm tra chuỗi có in ra màn hình được không, ký tự không in ra màn hình 
+                     là những ký tự như \t, \n
+"""
+
 
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
@@ -16,11 +24,16 @@ def capitalize():
 
 
 """
-    center(n, fillchar): Canh giữa chuỗi s và thêm những ký tự 2 bên để độ dài = n
+    center(n, fill_char): Canh giữa chuỗi s và thêm những ký tự 2 bên để độ dài = n
+    ljust(n, fill_char): Tương tự nhưng chuỗi s ở bên trái
+    rjust(n, fill_char): Tương tự nhưng chuỗi s ở bên phải
 """
-def center():
+def center_ljust():
     s = "Hello"
-    print(s.center(20, '*'))
+    n = 11
+    print("center():", s.center(n, '*'))
+    print("ljust():", s.ljust(n, '*'))
+    print("rjust()", s.rjust(n, '*'))
 
 
 # Return the number of times the value S appears in the strings
@@ -67,35 +80,41 @@ def join_string_array():
 
 
 # Trim a strings
-def trim_a_string():
-    txt = "           just                 "
-    print("Python is", txt.strip(), "not funny")
+def strip():
+    s = "        just                "
+    # Trim
+    print("strip():", s.strip())
+    # Left trim
+    print("lstrip():", s.lstrip())
+    # Right trim
+    print("rstrip():", s.rstrip())
 
 
-# Partition, cắt chuỗi thành 3 phần
+# Partition: Cắt chuỗi thành 3 phần (left, key, right)
 def partition():
-    txt = "I could eat bananas all day many bananas haha"
-    print(txt.partition("bananas"))
+    s = "I could eat bananas all day many bananas haha"
+    print(s.partition("bananas"))
 
 
 def zerofill():
     print("Zfill:", "new_one".zfill(10))
 
 
-def swapcase():
-    s = "aBC"
-    print(s.swapcase())
+# def swapcase():
+#     s = "aBC"
+#     print(s.swapcase())
 
 
 """
     casefold(): Viết thường chuỗi và loại bỏ dấu 
 """
 def lower_casefold():
-    s = "ß" # Tiếng đức
+    s = "ß"  # Tiếng đức
     # Chuyển đổi sang lowercase cơ bản
     print("lower: ", s.lower())
     # Áp dụng các quy tắc chuẩn hóa Unicode để loại bỏ các biến thể dấu và ký tự
     print("casefold: ", s.casefold())
+
 
 """
     "separator".join(): Dùng separator để nối một iterable thành chuỗi
@@ -103,6 +122,21 @@ def lower_casefold():
 def join():
     arr = ['a', 'b', 'c', 'd']
     print("join():", "*".join(arr))
+
+
+"""
+    - isalnum(): Chuỗi chỉ chứa ký tự chữ cái hoặc số
+    - isdigit(): Chỉ chứ số
+    - isalpha(): Chỉ chứa ký tự chữ cái
+    - isdecimal() = is_all_digit (0-9)
+    - isnumeric() = is_all_numeric
+"""
+def is_digit_letter():
+    s1 = "Python3"
+    print(s1.isalnum())  # True
+    s2 = "Python 3"
+    print(s2.isalnum())  # False
+    "".isnumeric()
 
 
 if __name__ == '__main__':
@@ -113,8 +147,12 @@ if __name__ == '__main__':
     # check_number_alpha()
     # join_string_array()
     # trim_a_string()
-    # partition()
+    partition()
     # zerofill()
     # swapcase()
     # lower_casefold()
-    join()
+    # join()
+    # is_digit_letter()
+    # center_ljust()
+    # strip()
+
