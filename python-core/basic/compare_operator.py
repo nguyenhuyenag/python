@@ -1,6 +1,7 @@
 """
-    A is B    ->  True if both variables are the same object in memory, else False
-    A == B    ->  Compares the equality of values that these 2 objects hold
+    A is B      ->  True if both variables are the same object in memory, else False
+    A == B      ->  Compares the equality of values that these 2 objects hold
+    A == B == C ->  Multi compare
 """
 x = ["apple", "banana"]
 y = ["apple", "banana"]
