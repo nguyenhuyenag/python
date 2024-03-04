@@ -1,3 +1,12 @@
+"""
+    isdigit()
+    uppper, isuppper()
+    lower(), islower()
+    split()
+    replace()
+"""
+"".title()
+
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
     # Viết hoa chữ cái đầu câu, còn lại viết thường
@@ -28,14 +37,13 @@ def find_index():
     s = "Mi casa, su casa"
 
     # find()
-    print("Find():", s.find("casa"))
+    print("find():", s.find("casa"))
+    print("rfind():", s.rfind("casa"))
 
     # index()
-    print("Index():", s.index("casa"))
+    print("index():", s.index("casa"))
     print("Last index of():", s.rindex("casa"))
     print("Index from:", s.index("casa", 4))
-
-    # print("Index:", s.)
 
 
 def check_number_alpha():
@@ -89,6 +97,13 @@ def lower_casefold():
     # Áp dụng các quy tắc chuẩn hóa Unicode để loại bỏ các biến thể dấu và ký tự
     print("casefold: ", s.casefold())
 
+"""
+    "separator".join(): Dùng separator để nối một iterable thành chuỗi
+"""
+def join():
+    arr = ['a', 'b', 'c', 'd']
+    print("join():", "*".join(arr))
+
 
 if __name__ == '__main__':
     # count()
@@ -101,4 +116,5 @@ if __name__ == '__main__':
     # partition()
     # zerofill()
     # swapcase()
-    lower_casefold()
+    # lower_casefold()
+    join()
