@@ -7,8 +7,7 @@
     - islower(), isuppper()
     - split()
     - replace()
-    - endswith()
-    - startwith()
+    - startwith(), endswith()
     - encode(): String to bytes
     - isspace(): Kiểm tra chuỗi có phải là khoảng trắng (có thể 1 hoặc nhiều)
     - isprintable(): Kiểm tra chuỗi có in ra màn hình được không, ký tự không in ra màn hình 
@@ -17,7 +16,6 @@
     - maketrans(): ???
     - translate(): ???
 """
-
 
 def capitalize():
     s = "I Love apples, Apple are MY Favorite fruit"
@@ -30,8 +28,9 @@ def capitalize():
 """
     zfill(): Thêm n - s.length() số '0' và bên trái để được chuỗi có độ dài = n 
 """
-def zerofill():
+def zero_fill():
     print("Zfill:", "new_one".zfill(10))
+
 
 """
     center(n, fill_char): Canh giữa chuỗi s và thêm những ký tự 2 bên để độ dài = n
@@ -91,7 +90,7 @@ def join_string_array():
 
 # Trim a strings
 def strip():
-    s = "        just                "
+    s = "      just            "
     # Trim
     print("strip():", s.strip())
     # Left trim
@@ -159,6 +158,12 @@ def split():
     print(text.rsplit(" ", 2))
 
 
+def remove_prefix_suffix():
+    text = "HelloWorldHello"
+    print("removeprefix:", text.removeprefix("Hello"))
+    print("removesuffix:", text.removesuffix("Hello"))
+
+
 if __name__ == '__main__':
     # count()
     # center()
@@ -168,11 +173,12 @@ if __name__ == '__main__':
     # join_string_array()
     # trim_a_string()
     # partition()
-    # zerofill()
+    # zero_fill()
     # swapcase()
     # lower_casefold()
     # join()
     # is_digit_letter()
     # center_ljust()
     # strip()
-    split()
+    # split()
+    remove_prefix_suffix()
