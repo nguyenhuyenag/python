@@ -1,4 +1,1 @@
-s = "     Hello        "
-print(s.swapcase())
-
-print(s.strip())
+print("Zfill:", "new_one".zfill(10))

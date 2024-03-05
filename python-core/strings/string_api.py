@@ -8,10 +8,14 @@
     - split()
     - replace()
     - endswith()
+    - startwith()
     - encode(): String to bytes
     - isspace(): Kiểm tra chuỗi có phải là khoảng trắng (có thể 1 hoặc nhiều)
     - isprintable(): Kiểm tra chuỗi có in ra màn hình được không, ký tự không in ra màn hình 
                      là những ký tự như \t, \n
+    
+    - maketrans(): ???
+    - translate(): ???
 """
 
 
@@ -22,6 +26,12 @@ def capitalize():
     # Viết hoa chữ cái đầu câi và mỗi chữ cái đầu tiên sau đấu cách
     print("title: " + s.title())
 
+
+"""
+    zfill(): Thêm n - s.length() số '0' và bên trái để được chuỗi có độ dài = n 
+"""
+def zerofill():
+    print("Zfill:", "new_one".zfill(10))
 
 """
     center(n, fill_char): Canh giữa chuỗi s và thêm những ký tự 2 bên để độ dài = n
@@ -90,14 +100,16 @@ def strip():
     print("rstrip():", s.rstrip())
 
 
-# Partition: Cắt chuỗi thành 3 phần (left, key, right)
+"""
+    partition(): Cắt chuỗi thành 3 phần (left, key, right)
+    rpartition(): Tương tự nhưng sẽ trả về ('', '', 'key') nếu key không tồn tại
+"""
 def partition():
     s = "I could eat bananas all day many bananas haha"
-    print(s.partition("bananas"))
-
-
-def zerofill():
-    print("Zfill:", "new_one".zfill(10))
+    print("partition:", s.partition("bananas"))
+    print("partition key not found: ", s.partition("xxx"))
+    print("rpatiton:", s.rpartition("all"))
+    print("rpatiton key not found:", s.rpartition("xxx"))
 
 
 # def swapcase():
@@ -136,7 +148,15 @@ def is_digit_letter():
     print(s1.isalnum())  # True
     s2 = "Python 3"
     print(s2.isalnum())  # False
-    "".isnumeric()
+
+def split():
+    text = "1 2 3 4 5"
+    # text = "one two three four"
+    print(text.split(" "))
+    # Chỉ split 2 phần từ (từ trái qua phải)
+    print(text.split(" ", 2))
+    # Chỉ split 2 phần từ (từ phải qua trái)
+    print(text.rsplit(" ", 2))
 
 
 if __name__ == '__main__':
@@ -147,7 +167,7 @@ if __name__ == '__main__':
     # check_number_alpha()
     # join_string_array()
     # trim_a_string()
-    partition()
+    # partition()
     # zerofill()
     # swapcase()
     # lower_casefold()
@@ -155,4 +175,4 @@ if __name__ == '__main__':
     # is_digit_letter()
     # center_ljust()
     # strip()
-
+    split()
