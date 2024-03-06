@@ -1,10 +1,18 @@
-# s1 = "apples, pears # and bananas\ngrapes\nbananas !apples"
-# s2 = "apples, pears\ngrapes\nbananas"
-# # print(s1)
-# # print(s2)
-# arr = s1.split('\n')
-# print(arr)
-#
-s1 = 'app#les'
-for i, c in enumerate(s1):
-    print(i, c)
+# def gcd(a,b):
+
+
+def gcd(a, b):
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            b -= a
+    return a
+
+
+def reduce_fraction(f):
+    a, b = f
+    _gcd = gcd(a, b)
+    if _gcd == 0:
+        return f
+    return (a / _gcd, b / _gcd)
