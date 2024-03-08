@@ -11,6 +11,7 @@ data = [3, 5, 1, 2, 6, 8, 7]
 def heapify():
     # Chuyển danh sách thành heap
     heapq.heapify(data)
+    # Này này data đã là heapq nên data[0] = peek
     print("Heap sau khi heapify:", data)
 
 
@@ -53,9 +54,20 @@ def heapreplace():
     print("Phần tử nhỏ nhất đã bị loại bỏ và phần tử mới thêm vào:", replace_min_element)
     print("Heap sau khi loại bỏ và thêm:", data)
 
+"""
+    Trả về danh sách n phần tử nhỏ nhất, lớn nhất
+"""
+def nsmallest_nlargest():
+    numbers = [1, 5, 2, 8, 3, 7, 4, 6]
+    largest_numbers = heapq.nlargest(3, numbers)
+    small_numbers = heapq.nsmallest(2, numbers)
+    print(largest_numbers)
+    print(small_numbers)
+
 if __name__ == '__main__':
-    heapify()
+    # heapify()
     # heappush()
     # heappop()
     # heappushpop()
-    heapreplace()
+    # heapreplace()
+    nsmallest_nlargest()

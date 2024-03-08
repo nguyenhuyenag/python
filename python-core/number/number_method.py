@@ -5,8 +5,6 @@
 """
     min, max: Tìm min, max của một tập hợp
 """
-
-
 def min_max():
     print("min(3,5): ", min(3, 5))
     numbers = [3, 1, 4, 1, 5]
