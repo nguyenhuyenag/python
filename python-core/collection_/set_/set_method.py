@@ -1,3 +1,10 @@
+def basic():
+    # create an empty set
+    empty_set = set()
+    # create an empty dictionary
+    empty_dictionary = {}
+
+
 def immutable_set():
     vowels = {'a', 'e', 'i', 'o', 'u'}
     fSet = frozenset(vowels)
@@ -12,16 +19,23 @@ def set_api():
 
     A.pop()  # Get and remove a random item, if set empty -> throws an error
 
-    A.isdisjoint(B)  # True if don't any common items, else False
+    A.isdisjoint(B)  # Kiểm tra 2 set có phần tử chung không?
 
     A.issubset(B)  # True B contains A, else False
     A.issuperset(B)  # True A contains B, else False
 
-    # CÁC PHÉP TOÁN TRONG TẬP HỢP
+
+"""
+    Các phép toán trên tập hợp
+"""
+def set_operator():
+    A = {1, 3, 5, 7, 9, 8}
+    B = {2, 3, 5, 7, 11}
 
     # Phép giao (hội)
-    C = A.intersection(B)  # Find common items 2 set (Shorthand A & B)
-    # A.intersection_update(B)      # A &= B
+    # C = A & B
+    C = A.intersection(B) # Tạo ra set mới
+    # A.intersection_update(B) # Tương đương với A &= B (thao tác trên set hiện tại)
     print(C)
 
     # Phép hợp
@@ -40,5 +54,6 @@ def set_api():
 
 
 if __name__ == '__main__':
+    basic()
     # immutable_set()
     set_api()
