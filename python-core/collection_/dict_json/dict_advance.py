@@ -6,6 +6,7 @@ def swap_key_and_value():
     print(new_dict)
     print(my_inverted_dict)
 
+
 # Sort a dictionary by values¶
 def sort_dict():
     data = {"a": 4, "e": 1, "b": 99, "d": 0, "c": 3}
@@ -13,6 +14,6 @@ def sort_dict():
     print(sorted_data)
 
 
-# sort_dict()
-swap_key_and_value()
-
+if __name__ == '__main__':
+    sort_dict()
+    # swap_key_and_value()
