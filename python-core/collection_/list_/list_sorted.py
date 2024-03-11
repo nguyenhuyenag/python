@@ -17,6 +17,11 @@ def sort_complex():
         {"name": "C", "year": 1972, "author": "Dennis Ritchie"},
         {"name": "C++", "year": 1985, "author": "Bjarne Stroustrup"},
     ]
+    """
+        Đảo ngược điều kiện so sánh:
+            result.sort(key=lambda w: (-counter[w], w)) // Đảo ngược 1 tiêu chí
+            result.sort(key=lambda w: (counter[w], w), reverse=True) // Đảo ngược toàn bộ
+    """
     sorted_data = sorted(thelist, key=lambda x: (x['year'], x['name']))
     print(sorted_data)
 

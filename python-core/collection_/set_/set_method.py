@@ -29,24 +29,30 @@ def set_api():
     Các phép toán trên tập hợp
 """
 def set_operator():
-    A = {1, 3, 5, 7, 9, 8}
-    B = {2, 3, 5, 7, 11}
+    A = {1, 3, 5, 9, 8}
+    B = {2, 3, 5, 11}
+    print(f"A = {A}")
+    print(f"B = {B}")
 
-    # Phép giao (hội)
-    # C = A & B
-    C = A.intersection(B) # Tạo ra set mới
+    # Phép hợp (gộp 2 set)
+    C = A | B
+    # A.union(B)  # A | B
+    # A.update(B)  # A |= B
+    print("Phép hợp: ", C)
+
+    # Phép giao (tìm phần tử chung)
+    C = A & B
+    # C = A.intersection(B)  # Tạo ra set mới
     # A.intersection_update(B) # Tương đương với A &= B (thao tác trên set hiện tại)
-    print(C)
-
-    # Phép hợp
-    A.union(B)  # A | B
-    A.update(B)  # A |= B
+    print("Phép giao: ", C)
 
     # Phép trừ
-    C = A.difference(B)  # A - B
-    print("A - B = ", C)
+    # C = A.difference(B)  # A - B
+    print(f"Phép trừ: A - B = {A - B}, B - A = {B - A}")
+    # print("Phép trừ (B - A): ", B - A)
 
-    C = A.symmetric_difference(B)  # A ∪ B - (A ∩ B) Những phần tử không chung của 2 tập hợp
+    # Những phần tử không chung của 2 tập hợp
+    C = A.symmetric_difference(B)  # = A ∪ B - (A ∩ B)
     print(C)
 
     # A.difference_update(B)          # Gán A = A - B
@@ -54,6 +60,7 @@ def set_operator():
 
 
 if __name__ == '__main__':
-    basic()
+    # basic()
     # immutable_set()
-    set_api()
+    # set_api()
+    set_operator()
