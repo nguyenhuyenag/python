@@ -1,9 +1,11 @@
-# Loop backwards
+"""
+    Loop backwards
+"""
+
 n = 5
 
-
 def _range_three_params():
-    print(list(range(n, -1, -1)))
+    print(list(range(n, 0, -1)))
 
 
 def _reverse():
@@ -14,6 +16,6 @@ def _slice_syntax():
     print(list(range(n + 1)[::-1]))
 
 
-_reverse()
 _range_three_params()
+_reverse()
 _slice_syntax()
