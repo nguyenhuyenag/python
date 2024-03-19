@@ -1,8 +1,6 @@
 import openpyxl
 import subprocess
 
-file_path = r'D:\WORK\Cloud\FirstDrive\Zother\chi-tieu.xlsx'
-
 
 def open_excel_with_office(file_path):
     try:
@@ -12,6 +10,7 @@ def open_excel_with_office(file_path):
 
 
 # Load the Excel workbook
+file_path = r'D:\WORK\Cloud\FirstDrive\Zother\chi-tieu.xlsx'
 workbook = openpyxl.load_workbook(file_path)
 sheet_name = workbook['Th3']  # Replace 'Sheet1' with your sheet name
 
