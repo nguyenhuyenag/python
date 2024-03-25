@@ -1,8 +1,13 @@
 def basic():
-    # create an empty set
-    empty_set = set()
-    # create an empty dictionary
-    empty_dictionary = {}
+    # Create set
+    my_set = set()
+    # my_set.add(123)
+
+    # Create set like dictionary
+    data = {}  # Nếu data đang rỗng -> AttributeError: 'dict' object has no attribute 'add'
+    # data = {'a'}
+    data.add('v')
+    print(data)
 
 
 def immutable_set():
@@ -28,6 +33,8 @@ def set_api():
 """
     Các phép toán trên tập hợp
 """
+
+
 def set_operator():
     A = {1, 3, 5, 9, 8}
     B = {2, 3, 5, 11}
@@ -60,7 +67,7 @@ def set_operator():
 
 
 if __name__ == '__main__':
-    # basic()
+    basic()
     # immutable_set()
     # set_api()
-    set_operator()
+    # set_operator()
