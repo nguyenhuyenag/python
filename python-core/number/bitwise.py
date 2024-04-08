@@ -9,6 +9,7 @@ def to_binary():
     n = 5
     # bin(n) = 0bxxx
     binary = format(17, 'b')
+    binary = format(n, '032b')  # Convert integer to 32-bit binary string
     print("binary:", binary)
     print("decimal:", int(binary, 2))
 
