@@ -38,7 +38,7 @@ def reverse_list():
     arr = [1, 2, 3, 4, 5]
 
     """
-        Reverse it self
+        Reverse it self -> return None
     """
     arr.reverse()
 
