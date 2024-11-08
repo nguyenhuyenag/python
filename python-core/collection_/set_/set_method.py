@@ -1,4 +1,8 @@
 def basic():
+    # Init set
+    vowels = set(['a', 'e', 'o', 'u', 'i'])
+    vowels = {'a', 'e', 'o', 'u', 'i'}
+
     # Create set
     my_set = set()
     # my_set.add(123)
@@ -20,14 +24,14 @@ def set_api():
     A = {1, 3, 5, 7, 9, 8}
     B = {2, 3, 5, 7, 11}
 
-    A.discard(8)  # Remove item
+    A.discard(8)        # Remove item
 
-    A.pop()  # Get and remove a random item, if set empty -> throws an error
+    A.pop()             # Get and remove a random item, if set empty -> throws an error
 
-    A.isdisjoint(B)  # Kiểm tra 2 set có phần tử chung không?
+    A.isdisjoint(B)     # Kiểm tra 2 set có phần tử chung không?
 
-    A.issubset(B)  # True B contains A, else False
-    A.issuperset(B)  # True A contains B, else False
+    A.issubset(B)       # True B contains A, else False
+    A.issuperset(B)     # True A contains B, else False
 
 
 """
@@ -67,7 +71,11 @@ def set_operator():
 
 
 if __name__ == '__main__':
-    basic()
+    # basic()
     # immutable_set()
     # set_api()
     # set_operator()
+    # vowels = set(['a', 'e', 'o', 'u', 'i'])
+    vowels = {'a', 'e', 'o', 'u', 'i'}
+    print(type(vowels))
+    pass
