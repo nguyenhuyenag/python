@@ -1,5 +1,5 @@
 """
-    + rangge(n) = [0, n - 1]
+    + range(n) = [0, n - 1]
 
     + range(m, n) = [m, n - 1]: If m >= n we get an empty sequence
 

@@ -1,49 +1,77 @@
 
-from odoo.http import request, Response
 
-- Get model id
-
-	model.ids = [id]
+	- 	Show column 
 	
-- Domain
+		SELECT column_name, data_type
+		FROM   information_schema.columns
+		WHERE  table_name = 'table_name';		-- 'table_name' not table_name
 
-	domain = [
-		('invoice_origin', '=', name), 
-		('invoice_status', '!=', 'invoiced'), 
-		("appoint_state", "not in", ['rejected'])
-	]
-	
-	Domain OR, AND
+	- Domain OR, AND
 	
 		field1 = 5 OR (field2 = 10 AND field3 = 12)
 		
 		['|', (field1, '=', 5), ('&', (field2, '=', 10), (field3, '=', 12))]
-
-- Save & create
-
-	ctx = request.session.context.copy()
-	ctx.update(context)
 	
-	model = request.env['helpdesk.ticket'].with_context(ctx)
-	result = model.create(values)
-
-- List field model
-
-	request.env['table.name']._fields
-
-- Find one & check entity exist
+	- Find one
 	
-	entity = request.env['table.name'].browse(int(order_id)) # Bắt buộc kiểu int()
-	if entity.exists():
-		# The entity exist
-	else:
-		# The entity doesn't exist
+		entity = request.env['table.name'].browse(int(order_id)) # Bắt buộc kiểu int()
+		if entity.exists():
+			pass
+		
+		if entity:
+			pass
 	
+	- Tìm kiếm theo keyword
 	
-	if entity:
-		# To do
+		domain = []
+		fields_search = ['name', 'description', 'description_short', 'create_date']
+		if keyword:
+			words = keyword.split()
+			domain.extend(['|'] * (len(words) * len(fields_search) - 1))
+			for w in words:
+				for f in fields_search:
+					domain.append((f, 'ilike', w))
+	
+	- Find all
+	
+		lists = request.env['res.partner'].sudo().search_read(domain, offset=offset, limit=limit, order=order)
+	
+	- Find and filter
+	
+		lists = request.env['res.partner'].sudo().search_read(domain, 
+					['id', 'name', 'display_name''write_date'],offset=offset, limit=limit, order=order)
+	
+	- Parse JSON
+	
+		result = []
+		for row in lists:
+			data = dict(row)
+			row['create_date'] = CSEDMasterController.convert_gmt(str(row['create_date']), int(gmt))
+			row['write_date'] = CSEDMasterController.convert_gmt(str(row['write_date']), int(gmt))
 
-- Find all
+			result.append(data)
+	
+	- Save & create
 
-	domain = [('id', 'in', list_email)]
-	lists = request.env['account.move'].search_read(domain, offset=offset, limit=limit, order=order)
+		ctx = request.session.context.copy()
+		ctx.update(context)
+		
+		model = request.env['helpdesk.ticket'].with_context(ctx)
+		result = model.create(values)
+
+	- Update
+
+		existing_row = request.env['res.partner'].browse(partner_id)
+		if existing_row.exists():
+			existing_row.write({'parent_id': new_company.id})
+
+	- List field model
+
+		request.env['table.name']._fields
+	
+	- Get model id
+
+		model.ids = [id]
+
+		
+
