@@ -1,12 +1,15 @@
 """
     Có 2 cách để sắp xếp:
 
-        - arr.sort() -> Sắp xếp trực tiếp trên mảng, không có giá trị trả về
-        - arr_sorted = sorted(arr) -> Trả về bản sao của mảng đã được sắp xếp, mảng gốc không thay đôi
+        - arr.sort() -> Sắp xếp trực tiếp trên mảng, không có giá trị trả về.
+
+        - sort_result = sorted(arr) -> Trả về bản sao của mảng đã được sắp xếp, mảng gốc không thay đôi.
+
         => sort() nhanh hơn sorted()
 
     Sort by length: list_.sort(key=len) = sorted(list_, key=len)
 """
+from typing import List
 
 
 def sort_in_place():
@@ -18,14 +21,20 @@ def sort_in_place():
 
 def sorted_test():
     the_list = [0, 4, 1, 3, 2]
+
     # Sort và trả về kết quả
     the_list_sorted = sorted(the_list)
+
     # Thay đổi giá trị mảng gốc
     the_list[0] = 9999
+
     # In ra kết quả
     print(the_list)
     print(the_list_sorted)
 
+def sort_by_bits(arr: List[int]) -> List[int]:
+    arr.sort(key=lambda x: (x.bit_count(), x))
+    return arr
 
 def sort_complex():
     the_list = [
