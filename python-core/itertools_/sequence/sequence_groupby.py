@@ -4,11 +4,11 @@ from itertools import groupby
     groups = []
     uniquekeys = []
     for k, g in groupby(data, keyfunc):
-        groups.append(list_(g))  # Store group iterator as a list_
+        groups.append(list_array(g))  # Store group iterator as a list_array
         uniquekeys.append(k)
 
     [k for k, g in groupby('AAAABBBCCDAABBB')]  --> A B C D A B
-    [list_(g) for k, g in groupby('AAAABBBCCD')] --> AAAA BBB CC D
+    [list_array(g) for k, g in groupby('AAAABBBCCD')] --> AAAA BBB CC D
 """
 
 def group1(things):

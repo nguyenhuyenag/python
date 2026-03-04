@@ -7,7 +7,7 @@
 
         => sort() nhanh hơn sorted()
 
-    Sort by length: list_.sort(key=len) = sorted(list_, key=len)
+    Sort by length: list_array.sort(key=len) = sorted(list_array, key=len)
 """
 from typing import List
 
