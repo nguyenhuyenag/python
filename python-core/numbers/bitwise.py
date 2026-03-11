@@ -1,8 +1,6 @@
 """
     from_bytes(): Chuyển mảng byte thành số nguyên dương
-"""
 
-"""
     Đếm bit '1' trong biểu diễn nhị phân của n
 """
 

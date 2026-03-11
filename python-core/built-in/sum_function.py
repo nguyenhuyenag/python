@@ -12,13 +12,13 @@ the_list = [1, 2, 3, 4, 5]
 print(sum(the_list, 100))
 print(sum(the_list, start=100))
 
-# Sum complex numbers
+# Sum complex number
 print("Complex: ", sum([3 + 2j, 5 + 6j]))
 
-# Sum Decimal numbers
+# Sum Decimal number
 print("Decimal: ", sum([Decimal(0.2), Decimal(0.3), Decimal("0.4")]))
 
-# Sum Fraction numbers
+# Sum Fraction number
 print("Faction: ", sum([Fraction(51, 5), Fraction(25, 2), Fraction(59, 5)]))
 
 """
