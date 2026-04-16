@@ -1,9 +1,31 @@
+import random
+import time
+
 import requests
+import requests
+import random
+import time
 
-url = ('http://192.168.11.69:8080/ts24id_ws_v1/IDTS24.rest/loginAuthentication?userAgent=ts24pro&passAgent=d1663225d1689433cb6943621635189a'
-       '&userAccount=huyennv@gmail.com'
-       '&passAccount=e10adc3949ba59abbe56e057f20f883e_1')
+url = ('/todolist/v1/user/login')
 
-for i in range(4):
-    response = requests.post(url)
+domain = [
+    'http://localhost:8080',
+    'http://192.168.11.69:8080'
+]
+
+data = {
+    "uid": "abc@yahoo.com",
+    "tokenSocial": "xxx"
+}
+
+while True:
+    base = random.choice(domain)
+    full_url = base + url
+
+    response = requests.post(full_url, json=data)
+
+    print(full_url)
     print(response.text)
+
+    time.sleep(2)
+    break
